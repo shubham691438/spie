@@ -24,7 +24,7 @@ const RunningTruck = ({ setIsTruckRunning }) => {
       // Stop the truck after 7 seconds
       setTimeout(() => {
         setIsTruckRunning(false);
-      }, 7000);
+      }, 6500);
 
       // Play both audio and video
       audioRef.current.play();
@@ -46,7 +46,7 @@ const RunningTruck = ({ setIsTruckRunning }) => {
   };
 
   return (
-    <div>
+    <div className='cursor-' >
     {/* Instruction Text */}
     {!isPlaying && <div className='fixed top-4 left-1/2  z-20'>
       <div className="transform -translate-x-1/2 bg-black bg-opacity-60 text-white text-lg px-4 py-2 rounded-md z-10 text-center ">
@@ -69,7 +69,7 @@ const RunningTruck = ({ setIsTruckRunning }) => {
   {/* Draggable Box - Trigger playMedia when dragged to the right */}
   {!isPlaying && (
     <Draggable
-      
+     
       handle=".handle"
       defaultPosition={{ x: 0, y: 0 }}
       position={null}
@@ -77,7 +77,7 @@ const RunningTruck = ({ setIsTruckRunning }) => {
       scale={1}
       onDrag={handleDrag} 
     >
-      <div className="handle absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer flex justify-center items-center animate-pulse">
+      <div className="handle absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center animate-pulse">
         <img
           src={DeliveryBoxImg}
           alt="Delivery Box"
