@@ -14,6 +14,15 @@ const RunningTruck = ({ setIsTruckRunning }) => {
   const truckHornRef = useRef(null);
 
   const [draggedRight, setDraggedRight] = useState(false); // Track if dragged to the right
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handleStart = () => {
+    setIsDragging(true); // Update state when dragging starts
+  };
+
+  const handleStop = () => {
+    setIsDragging(false); // Revert state when dragging stops
+  };
 
   const playMedia = () => {
     // Play truck horn sound
@@ -76,8 +85,13 @@ const RunningTruck = ({ setIsTruckRunning }) => {
       grid={[25, 25]}
       scale={1}
       onDrag={handleDrag} 
+      onStart={handleStart}
+      onStop={handleStop}
+
     >
-      <div className="handle absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center animate-pulse">
+      <div className={`handle absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center animate-pulse ${
+          isDragging ? 'cursor-grabbing' : 'cursor-grab'
+        }`}>
         <img
           src={DeliveryBoxImg}
           alt="Delivery Box"
