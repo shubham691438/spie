@@ -3,6 +3,7 @@ import BackgroundVideo from '../assets/video/movingTruck.mp4';
 import PassingTruckAudio from '../assets/audio/passingTruckAudio.mp3';
 import truckHorn from '../assets/audio/truckHorn.wav';
 import DeliveryBoxImg from '../assets/img/deliveryBox.png';
+import PointingDownIcon from '../assets/img/pointingDown.png';
 
 import Draggable from 'react-draggable';
 
@@ -32,8 +33,10 @@ const RunningTruck = ({ setIsTruckRunning }) => {
     }
   };
 
+
   const handleDrag = (e, data) => {
     
+    e.preventDefault();
    
     console.log(data.x, data.y,draggedRight);
     if (data.x > 50 && !draggedRight) {
@@ -44,15 +47,18 @@ const RunningTruck = ({ setIsTruckRunning }) => {
 
   return (
     <div>
-  {/* Instruction Text */}
-  <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-60 text-white text-lg px-4 py-2 rounded-md z-10 text-center">
-    Pack the delivery box onto the truck to kickstart the adventure!
-  </div>
+    {/* Instruction Text */}
+    {!isPlaying && <div className='fixed top-4 left-1/2  z-20'>
+      <div className="transform -translate-x-1/2 bg-black bg-opacity-60 text-white text-lg px-4 py-2 rounded-md z-10 text-center ">
+        Pack the delivery box onto the truck to kickstart the adventure!
+      </div>
+      {/* <img src={PointingDownIcon} className=' transform -translate-x-1/2 w-20 h-20 object-contain z-20 animate-bounce'/> */}
+    </div>}
 
   {/* Background Video */}
   <video
     ref={videoRef}
-    className="fixed min-w-full min-h-full right-0 bottom-0"
+    className="fixed min-w-full min-h-full right-0 bottom-0 "
     loop
     muted
   >
@@ -63,20 +69,25 @@ const RunningTruck = ({ setIsTruckRunning }) => {
   {/* Draggable Box - Trigger playMedia when dragged to the right */}
   {!isPlaying && (
     <Draggable
+      
+      handle=".handle"
+      defaultPosition={{ x: 0, y: 0 }}
       position={null}
       grid={[25, 25]}
       scale={1}
-      onDrag={handleDrag} // Use handleDrag to track movement
+      onDrag={handleDrag} 
     >
-      <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer flex justify-center items-center animate-pulse">
+      <div className="handle absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer flex justify-center items-center animate-pulse">
         <img
           src={DeliveryBoxImg}
           alt="Delivery Box"
-          className="w-20 h-20 object-contain"
+          className="w-20 h-20 object-contain z-0"
+          draggable="false" ondragstart="return false"
         />
       </div>
     </Draggable>
   )}
+
 
   {/* Audio Elements */}
   <audio ref={truckHornRef}>
