@@ -39,7 +39,7 @@ const RunningTruck = ({ setIsTruckRunning }) => {
     e.preventDefault();
    
     console.log(data.x, data.y,draggedRight);
-    if (data.x > 50 && !draggedRight) {
+    if (data.x > 50 && data.y>=-75 && !draggedRight) {
       setDraggedRight(true);
       playMedia(); 
     }
