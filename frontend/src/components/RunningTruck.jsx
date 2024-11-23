@@ -44,60 +44,49 @@ const RunningTruck = ({ setIsTruckRunning }) => {
 
   return (
     <div>
-      {/* Background Video */}
-      <video
-        ref={videoRef}
-        className="background-video fixed min-w-[100%] min-h-[100%] right-0 bottom-0"
-        loop
-        muted
-      >
-        <source src={BackgroundVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+  {/* Instruction Text */}
+  <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-60 text-white text-lg px-4 py-2 rounded-md z-10 text-center">
+    Pack the delivery box onto the truck to kickstart the adventure!
+  </div>
 
-      {/* Draggable Box - Trigger playMedia when dragged to the right */}
-      {!isPlaying && (
-        <Draggable
-          position={null}
-          grid={[25, 25]}
-          scale={1}
-          onDrag={handleDrag} // Use handleDrag to track movement
-        >
-          <div
-            style={{
-              position: 'absolute',
-              top: '52%',
-              left: '22%',
-              transform: 'translate(-50%, -50%)',
-              cursor: 'pointer',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              animation: 'pulse 1.5s infinite',
-            }}
-          >
-            <img
-              src={DeliveryBoxImg}
-              alt="Delivery Box"
-              style={{
-                width: '80px',
-                height: '80px',
-                objectFit: 'contain',
-              }}
-            />
-          </div>
-        </Draggable>
-      )}
+  {/* Background Video */}
+  <video
+    ref={videoRef}
+    className="fixed min-w-full min-h-full right-0 bottom-0"
+    loop
+    muted
+  >
+    <source src={BackgroundVideo} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-      {/* Audio Elements */}
-      <audio ref={truckHornRef}>
-        <source src={truckHorn} type="audio/mpeg" />
-      </audio>
-      <audio ref={audioRef} loop>
-        <source src={PassingTruckAudio} type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+  {/* Draggable Box - Trigger playMedia when dragged to the right */}
+  {!isPlaying && (
+    <Draggable
+      position={null}
+      grid={[25, 25]}
+      scale={1}
+      onDrag={handleDrag} // Use handleDrag to track movement
+    >
+      <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer flex justify-center items-center animate-pulse">
+        <img
+          src={DeliveryBoxImg}
+          alt="Delivery Box"
+          className="w-20 h-20 object-contain"
+        />
+      </div>
+    </Draggable>
+  )}
+
+  {/* Audio Elements */}
+  <audio ref={truckHornRef}>
+    <source src={truckHorn} type="audio/mpeg" />
+  </audio>
+  <audio ref={audioRef} loop>
+    <source src={PassingTruckAudio} type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+</div>
   );
 };
 
