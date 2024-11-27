@@ -55,9 +55,9 @@ const RunningTruck = ({ setIsTruckRunning }) => {
   };
 
   return (
-    <div className='cursor-' >
+    <div >
     {/* Instruction Text */}
-    {!isPlaying && <div className='fixed top-4 left-1/2  z-20'>
+    {!isPlaying && <div className='fixed top-[450px] left-2/4  z-20'>
       <div className="transform -translate-x-1/2 bg-black bg-opacity-60 text-white text-lg px-4 py-2 rounded-md z-10 text-center ">
         Pack the delivery box onto the truck to kickstart the adventure!
       </div>
