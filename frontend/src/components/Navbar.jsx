@@ -33,7 +33,7 @@ const Navbar = () => {
         <a href="#" className="hover:underline">
         Events
         </a>
-        <a href="#" className="hover:underline">
+        <a href="Team" className="hover:underline">
         Team
         </a>
         <a href="#" className="hover:underline">
@@ -127,7 +127,7 @@ const Navbar = () => {
         <a href="#" className="block hover:underline mb-2">
         Events
         </a>
-        <a href="#" className="block hover:underline mb-2">
+        <a href="Team" className="block hover:underline mb-2">
         Team
         </a>
         <a href="#" className="block hover:underline mb-2">
