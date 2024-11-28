@@ -1,0 +1,14 @@
+.cog {
+    cursor: pointer;
+    transform-origin: center;
+    transition: transform 0.5s ease;
+  }
+  
+  .taz_isRunning {
+    background-color: #4f46e5; /* Indigo */
+  }
+  
+  .taz_isTriggered {
+    background-color: #10b981; /* Green */
+  }
+  
