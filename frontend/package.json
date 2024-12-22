@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable": "^4.4.6",
-    "react-router-dom": "^7.0.1"
+    "react-router-dom": "^7.0.1",
+    "scrollmagic": "^2.0.8"
+    
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

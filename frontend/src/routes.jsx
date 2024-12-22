@@ -1,6 +1,7 @@
 import App from "./App.jsx";
 import MainLayout from "./layouts/MainLayout.jsx";
 import Team from "./pages/Team.jsx"; // Import the Team page component
+import Events from "./pages/Events.jsx";
 import { createBrowserRouter } from "react-router-dom";
 
 const routes = createBrowserRouter([
@@ -16,6 +17,10 @@ const routes = createBrowserRouter([
         path: "/Team", // Route for the Team page
         element: <Team />,
       },
+      {
+        path:"/events",  //Route for events page
+        element:<Events/>
+      }
       // Add more routes as needed
     ],
   },

@@ -21,7 +21,7 @@ const Navbar = () => {
   }, [isDark]);
 
   return (
-    <nav className="bg-gray-900 text-white dark:bg-white dark:text-black p-2 flex items-center justify-between relative">
+    <nav className="bg-gray-900  text-white dark:bg-white dark:text-black p-2 flex items-center justify-between relative">
       
       <div className="text-2xl font-bold">SPIE-NITJSR</div>
 
@@ -30,7 +30,7 @@ const Navbar = () => {
         <a href="#" className="hover:underline">
           Home
         </a>
-        <a href="#" className="hover:underline">
+        <a href="events" className="hover:underline">
         Events
         </a>
         <a href="Team" className="hover:underline">
@@ -124,7 +124,7 @@ const Navbar = () => {
            <a href="#" className="block hover:underline mb-2">
           Home
         </a>
-        <a href="#" className="block hover:underline mb-2">
+        <a href="events" className="block hover:underline mb-2">
         Events
         </a>
         <a href="Team" className="block hover:underline mb-2">
