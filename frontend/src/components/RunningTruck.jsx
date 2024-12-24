@@ -8,6 +8,8 @@ import PointingDownIcon from '../assets/img/pointingDown.png';
 import Draggable from 'react-draggable';
 
 const RunningTruck = ({ setIsTruckRunning }) => {
+
+  sessionStorage.setItem('runningTruckLoaded', true);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
   const videoRef = useRef(null);
