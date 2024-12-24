@@ -27,7 +27,7 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <div className="hidden lg:flex items-center gap-4">
-        <a href="#" className="hover:underline">
+        <a href="/" className="hover:underline">
           Home
         </a>
         <a href="events" className="hover:underline">
