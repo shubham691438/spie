@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isDark, setDark] = useState(true); // Default is dark mode
@@ -25,32 +26,32 @@ const Navbar = () => {
       
       <div className="text-2xl font-bold">SPIE-NITJSR</div>
 
-      {/* Desktop Menu */}
-      <div className="hidden lg:flex items-center gap-4">
-        <a href="home" className="hover:underline">
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center gap-4">
+        <Link to="/" className="hover:underline">
           Home
-        </a>
-        <a href="events" className="hover:underline">
-        Events
-        </a>
-        <a href="Team" className="hover:underline">
-        Team
-        </a>
-        <a href="#" className="hover:underline">
-        About
-        </a>
-        <a href="#" className="hover:underline">
-        Blog
-        </a>
-        <a href="#" className="hover:underline">
-        Gallery
-        </a>
-        <a href="#" className="hover:underline">
-        Student Activity
-        </a>
-        <a href="#" className="hover:underline">
-        register
-        </a>
+        </Link>
+        <Link to="/events" className="hover:underline">
+          Events
+        </Link>
+        <Link to="/team" className="hover:underline">
+          Team
+        </Link>
+        <Link to="/about" className="hover:underline">
+          About
+        </Link>
+        <Link to="/blog" className="hover:underline">
+          Blog
+        </Link>
+        <Link to="/gallery" className="hover:underline">
+          Gallery
+        </Link>
+        <Link to="/student-activity" className="hover:underline">
+          Student Activity
+        </Link>
+        <Link to="/register" className="hover:underline">
+          Register
+        </Link>
       </div>
 
       {/* Action Buttons */}
@@ -121,30 +122,32 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMenu && (
         <div className="absolute top-16 left-0 w-full bg-gray-900 text-white dark:bg-white dark:text-black p-4 lg:hidden z-10">
-           <a href="#" className="block hover:underline mb-2">
-          Home
-        </a>
-        <a href="events" className="block hover:underline mb-2">
-        Events
-        </a>
-        <a href="Team" className="block hover:underline mb-2">
-        Team
-        </a>
-        <a href="#" className="block hover:underline mb-2">
-        About
-        </a>
-        <a href="#" className="block hover:underline mb-2">
-        Blog
-        </a>
-        <a href="#" className="block hover:underline mb-2">
-        Gallery
-        </a>
-        <a href="#" className="block hover:underline mb-2">
-        Student Activity
-        </a>
-        <a href="#" className="block hover:underline mb-2">
-        register
-        </a>
+          <div>
+            <Link to="/" className="block hover:underline mb-2">
+              Home
+            </Link>
+            <Link to="/events" className="block hover:underline mb-2">
+              Events
+            </Link>
+            <Link to="/team" className="block hover:underline mb-2">
+              Team
+            </Link>
+            <Link to="/about" className="block hover:underline mb-2">
+              About
+            </Link>
+            <Link to="/blog" className="block hover:underline mb-2">
+              Blog
+            </Link>
+            <Link to="/gallery" className="block hover:underline mb-2">
+              Gallery
+            </Link>
+            <Link to="/student-activity" className="block hover:underline mb-2">
+              Student Activity
+            </Link>
+            <Link to="/register" className="block hover:underline mb-2">
+              Register
+            </Link>
+          </div>
         </div>
       )}
     </nav>

@@ -63,7 +63,7 @@ const members = [
   {id: 58, name: "Kishan kr", batch: "2021", por: "MANAGER", contact:""},
   {id: 59, name: "Prasanna", batch: "2022", por: "JOINT SECRETARY", contact:""},
   {id: 60, name: "Sarthak", batch: "2021", por: "PR HEAD", contact:""},
-  {id: 61, name: "Shubham singh, batch: "2021", por: "WEB HEAD", contact:""},
+  {id: 61, name: "Shubham singh", batch: "2021", por: "WEB HEAD", contact:""},
   {id: 62, name: "Abhishek kr", batch: "2021", por: "CREATIVE HEAD", contact:""},
   {id: 63, name: "Kajal kumari", batch: "2021", por: "CREATIVE HEAD", contact:""},
   {id: 64, name: "Riya keshri", batch: "2021", por: "CULTURAL SECRETARY", contact:""},

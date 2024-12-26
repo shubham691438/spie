@@ -22,11 +22,7 @@ const routes = createBrowserRouter([
         path:"/events",  //Route for events page
         element:<Events/>
       },
-      {
-        path:"/home",  //Route for home page
-        element:<Home/>
-      },
-      // Add more routes as needed
+      
     ],
   },
 ]);
