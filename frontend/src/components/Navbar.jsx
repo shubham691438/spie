@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
-  const [isDark, setDark] = useState(true); // Default to Light Mode
+  const [isDark, setDark] = useState(true); // Default is dark mode
   const [isMenu, setMenu] = useState(false);
 
   const toggleDarkMode = () => {
@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    if (isDark) {
+    if (!isDark) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
