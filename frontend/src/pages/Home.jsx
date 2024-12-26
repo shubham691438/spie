@@ -11,7 +11,7 @@ const App = () => {
   const rotateGear3 = useTransform(scrollY, [0, 1000], [0, -720]);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center px-4 md:px-16">
+    <div className="min-h-screen text-white flex items-center justify-center px-4 md:px-16">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 w-full">
         <div className="text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold">SPIE</h1>
