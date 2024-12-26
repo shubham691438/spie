@@ -1,9 +1,10 @@
-import React from "react";
+import { useState } from "react";
 
 const Gear = ({ members, onHover }) => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   return (
     <div className="relative">
-      {/* Animated Gear */}
       <svg
         width="300"
         height="300"
@@ -19,9 +20,16 @@ const Gear = ({ members, onHover }) => {
           strokeWidth="8"
         />
         {members.map((member, index) => {
-          const angle = (360 / members.length) * index;
-          const x = 50 + 35 * Math.cos((angle * Math.PI) / 180);
-          const y = 50 + 35 * Math.sin((angle * Math.PI) / 180);
+          
+          const angle = (2 * Math.PI / members.length) * index;
+          const baseRadius = 35;
+          const hoverOffset = hoveredIndex === index ? 3 : 0;
+
+          const effectiveRadius = baseRadius + hoverOffset;
+          const x = 50 + effectiveRadius * Math.cos(angle); 
+          const y = 50 + effectiveRadius * Math.sin(angle); 
+         
+          const fillColor = index % 2 === 0 ? "#1E3A8A" : "#60A5FA";
 
           return (
             <circle
@@ -29,10 +37,16 @@ const Gear = ({ members, onHover }) => {
               cx={x}
               cy={y}
               r="6"
-              fill="#60A5FA"
-              className="cursor-pointer hover:fill-yellow-400 hover:scale-110 transition-all duration-300 shadow-lg"
-              onMouseEnter={() => onHover(member)}
-              onMouseLeave={() => onHover(null)}
+              fill={hoveredIndex === index ? "#FBBF24" : fillColor} 
+              className="cursor-pointer hover:scale-100 transition-all duration-800 shadow-lg"
+              onMouseEnter={() => {
+                setHoveredIndex(index);
+                onHover(member);
+              }}
+              onMouseLeave={() => {
+                setHoveredIndex(null);
+                onHover(null);
+              }}
             />
           );
         })}
