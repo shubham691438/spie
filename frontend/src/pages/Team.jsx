@@ -101,6 +101,7 @@ const Team = () => {
           onChange={(e) => setSelectedBatch(e.target.value)}
         >
           <option value="all">All</option>
+          <option value="2021">2021</option>
           <option value="2022">2022</option>
           <option value="2023">2023</option>
         </select>
