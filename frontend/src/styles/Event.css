@@ -1,0 +1,32 @@
+/* Event item transition and animation */
+.event-item {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  /* 'in-view' class that applies after the scene is triggered */
+  .event-item.in-view {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Add padding and shadows to the content inside the event item */
+  .event-item .max-w-sm {
+    padding: 1.5rem; /* Adds padding inside the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  .event-item .max-w-sm:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  }
+  
+  .event-item .max-w-sm a {
+    transition: background-color 0.3s ease;
+  }
+  
+  .event-item .max-w-sm a:hover {
+    background-color: #4b6cb7; /* Darker blue on hover */
+  }
+  
