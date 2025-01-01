@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Gear from "../components/Gear"
+import Gear from "../components/Gear";
 import MemberCard from "../components/MemberCard";
 
 const members = [
@@ -73,12 +73,17 @@ const members = [
 
 const Team = () => {
   const [selectedBatch, setSelectedBatch] = useState("all");
+  const [selectedPor, setSelectedPor] = useState("all");
   const [hoveredMember, setHoveredMember] = useState(null);
 
-  const filteredMembers =
-    selectedBatch === "all"
-      ? members
-      : members.filter((member) => member.batch === selectedBatch);
+  const porOptions = ["all", ...new Set(members.map((member) => member.por.toUpperCase()))];
+
+  const filteredMembers = members.filter((member) => {
+    return (
+      (selectedBatch === "all" || member.batch === selectedBatch) &&
+      (selectedPor === "all" || member.por.toUpperCase() === selectedPor)
+    );
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col items-center py-10 dark:bg-white dark:text-black">
@@ -87,8 +92,8 @@ const Team = () => {
         Meet Our Team
       </h1>
 
-      {/* Dropdown */}
-      <div className="mb-10">
+      <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+        <div>
         <label
           htmlFor="batch"
           className="text-xl font-medium text-gray-300 mr-4"
@@ -105,6 +110,27 @@ const Team = () => {
           <option value="2022">2022</option>
           <option value="2023">2023</option>
         </select>
+      </div>
+
+        <div>
+          <label
+            htmlFor="por"
+            className="text-xl font-medium text-gray-300 mr-4"
+          >
+            Filter by PoR:
+          </label>
+          <select
+            id="por"
+            className="bg-gray-800 border border-gray-600 rounded-md text-white px-4 py-2 focus:outline-none focus:ring focus:ring-blue-500 transition-shadow"
+            onChange={(e) => setSelectedPor(e.target.value)}
+          >
+            {porOptions.map((por, index) => (
+              <option key={index} value={por}>
+                {por}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       {/* Gear and Member Card */}
