@@ -28,6 +28,10 @@ const routes = createBrowserRouter([
         path:"/about",  //Route for About page
         element:<About/>
       },
+      {
+        path:"/Blog",  //Route for blog page
+        element:<Blog/>
+      },
     ],
   },
 ]);
