@@ -51,7 +51,7 @@ const members = [
   { id: 46, name: "Tabish", batch: "2023", por: "PR", contact: "" },
   { id: 47, name: "Saransh", batch: "2023", por: "PR", contact: "" },
   { id: 48, name: "Sushant", batch: "2023", por: "PR", contact: "" },
-  {id: 49, name: "Sriya sharma", batch: "2021", por: "PRESIDENT", contact:""},
+  {id: 49, name: "Priya sharma", batch: "2021", por: "PRESIDENT", contact:""},
   {id: 50, name: "Shanmukh", batch: "2021", por: "GENRAL SECRETARY", contact:""},
   {id: 51, name: "Atharva pratap singh", batch: "2022", por: "VICE PRESIDENT", contact:""},
   {id: 52, name: "Krishna gupta", batch: "2021", por: "TREASURER", contact:""},
@@ -70,11 +70,20 @@ const members = [
   {id: 65, name: "Siddhart kr", batch: "2021", por: "PR HEAD", contact:""},
 ];
 
+const topCards = ({ member }) => (
+  <div
+    className="bg-gradient-to-r from-purple-400 to-blue-400 text-white p-6 rounded-lg shadow-md w-72 text-center hover:scale-105 transition-transform"
+  >
+    <h2 className="text-2xl font-bold">{member.name}</h2>
+    <p className="text-lg">{member.por}</p>
+    <p className="text-sm">Batch: {member.batch}</p>
+  </div>
+);
 
 const Team = () => {
+  const [hoveredMember, setHoveredMember] = useState(null);
   const [selectedBatch, setSelectedBatch] = useState("all");
   const [selectedPor, setSelectedPor] = useState("all");
-  const [hoveredMember, setHoveredMember] = useState(null);
 
   const porOptions = ["all", ...new Set(members.map((member) => member.por.toUpperCase()))];
 
@@ -85,32 +94,35 @@ const Team = () => {
     );
   });
 
+  const filt = filteredMembers.filter((member) => member.batch === "2021");
+
+  const gearMembers = filteredMembers.filter((member) => member.batch !== "2021");
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col items-center py-10 dark:bg-white dark:text-black">
-      {/* Header */}
       <h1 className="text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 mb-12">
         Meet Our Team
       </h1>
 
       <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
         <div>
-        <label
-          htmlFor="batch"
-          className="text-xl font-medium text-gray-300 mr-4"
-        >
-          Filter by Batch:
-        </label>
-        <select
-          id="batch"
-          className="bg-gray-800 border border-gray-600 rounded-md text-white px-4 py-2 focus:outline-none focus:ring focus:ring-blue-500 transition-shadow"
-          onChange={(e) => setSelectedBatch(e.target.value)}
-        >
-          <option value="all">All</option>
-          <option value="2021">2021</option>
-          <option value="2022">2022</option>
-          <option value="2023">2023</option>
-        </select>
-      </div>
+          <label
+            htmlFor="batch"
+            className="text-xl font-medium text-gray-300 mr-4"
+          >
+            Filter by Batch:
+          </label>
+          <select
+            id="batch"
+            className="bg-gray-800 border border-gray-600 rounded-md text-white px-4 py-2 focus:outline-none focus:ring focus:ring-blue-500 transition-shadow"
+            onChange={(e) => setSelectedBatch(e.target.value)}
+          >
+            <option value="all">All</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+          </select>
+        </div>
 
         <div>
           <label
@@ -124,18 +136,75 @@ const Team = () => {
             className="bg-gray-800 border border-gray-600 rounded-md text-white px-4 py-2 focus:outline-none focus:ring focus:ring-blue-500 transition-shadow"
             onChange={(e) => setSelectedPor(e.target.value)}
           >
-            {porOptions.map((por, index) => (
-              <option key={index} value={por}>
-                {por}
-              </option>
-            ))}
+            {porOptions
+    .filter((por) => por !== "PRESIDENT" && por !== "GENERAL SECRETARY")
+    .map((por) => (
+      <option key={por} value={por}>
+        {por}
+      </option>
+    ))}
           </select>
         </div>
       </div>
 
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+  <div className="col-span-1 md:col-span-2 grid grid-cols-2 gap-6">
+    {filt
+      .filter(
+        (member) =>
+          member.por === "PRESIDENT" || member.por === "GENERAL SECRETARY"
+      )
+      .map((member) => (
+        <div
+          key={member.id}
+          className="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg p-4 flex flex-col items-center"
+        >
+          <div className="w-24 h-24 bg-white rounded-full overflow-hidden mb-4">
+            <img
+              src={member.photo || ""}
+              alt={member.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <h3 className="text-lg font-bold">{member.name}</h3>
+          <p className="text-sm">{member.por}</p>
+          <p className="text-xs">Batch: {member.batch}</p>
+        </div>
+      ))}
+  </div>
+
+  {/*  Remaining 3 cards */ }
+  {filt
+    .filter(
+      (member) =>
+        member.por !== "PRESIDENT" && member.por !== "GENERAL SECRETARY"
+    )
+    .map((member) => (
+      <div
+        key={member.id}
+        className="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg p-4 flex flex-col items-center"
+      >
+        {/* Photo Section */}
+        <div className="w-24 h-24 bg-white rounded-full overflow-hidden mb-4">
+          <img
+            src={member.photo || ""}
+            alt={member.name}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        {/* Member Details */}
+        <h3 className="text-lg font-bold">{member.name}</h3>
+        <p className="text-sm">{member.por}</p>
+        <p className="text-xs">Batch: {member.batch}</p>
+      </div>
+    ))}
+</div>
+
+
+
       {/* Gear and Member Card */}
       <div className="flex flex-col md:flex-row items-center gap-12">
-        <Gear members={filteredMembers} onHover={setHoveredMember} />
+        <Gear members={gearMembers} onHover={setHoveredMember} />
         <MemberCard member={hoveredMember} />
       </div>
     </div>
