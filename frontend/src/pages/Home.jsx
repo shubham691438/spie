@@ -4,6 +4,7 @@ import gear1 from "../assets/img/gear1.png";
 import gear2 from "../assets/img/gear2.png";
 import gear3 from "../assets/img/gear3.png";
 import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
+import { HomeEvents } from "../components/HomeEvents";
 
 const App = () => {
   const { scrollY } = useScroll();
@@ -23,16 +24,16 @@ const App = () => {
           <p className="text-lg md:text-xl text-gray-400 mt-4">
           Where creativity meets logic, turning challenges into opportunities and processes into perfection
           </p>
-          <div className="mt-6 flex justify-start text-center">
-                      <HoverBorderGradient
-                        containerClassName="rounded-full"
-                        as="button"
-                        className="bg-black  text-white flex items-center space-x-2"
-                      >
-                        <AceternityLogo />
-                        <span>Register Now</span>
-                      </HoverBorderGradient>
-                    </div>
+            <div className="mt-6 flex justify-start text-center">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+                className="bg-black  text-white flex items-center space-x-2"
+              >
+                <AceternityLogo />
+                <span>Register Now</span>
+              </HoverBorderGradient>
+            </div>
         </div>
         <div className="relative flex justify-center md:justify-end">
           <motion.img
@@ -149,6 +150,21 @@ const App = () => {
                 </div>
             </div>
         </section>
+      </div>
+
+      <div className="mt-10">
+        <h2 className="text-6xl font-extrabold text-white">Major Events</h2>
+        <HomeEvents />
+        <div className="md:ml-64 flex  text-center">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+                className="bg-black  text-white flex items-center space-x-2"
+              >
+                <AceternityLogo />
+                <span>Know More ...</span>
+              </HoverBorderGradient>
+            </div>
       </div>
     </div>
   );
