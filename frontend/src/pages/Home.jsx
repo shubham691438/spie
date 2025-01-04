@@ -5,6 +5,7 @@ import gear2 from "../assets/img/gear2.png";
 import gear3 from "../assets/img/gear3.png";
 import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
 import { HomeEvents } from "../components/HomeEvents";
+import Placement from "../components/Placement";
 
 const App = () => {
   const { scrollY } = useScroll();
@@ -152,6 +153,7 @@ const App = () => {
         </section>
       </div>
 
+      {/* Major Events Section */}
       <div className="mt-10">
         <h2 className="text-6xl font-extrabold text-white">Major Events</h2>
         <HomeEvents />
@@ -164,8 +166,10 @@ const App = () => {
                 <AceternityLogo />
                 <span>Know More ...</span>
               </HoverBorderGradient>
-            </div>
+        </div>
       </div>
+
+      <Placement />
     </div>
   );
 };
