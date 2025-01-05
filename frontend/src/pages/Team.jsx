@@ -52,7 +52,7 @@ const members = [
   { id: 46, name: "Tabish", batch: "2023", por: "PR", contact: "", src: "/core-46.png", alt: "46" },
   { id: 47, name: "Saransh", batch: "2023", por: "PR", contact: "", src: "/core-47.png", alt: "47" },
   { id: 48, name: "Sushant", batch: "2023", por: "PR", contact: "", src: "/core-48.png", alt: "48" },
-  { id: 49, name: "Sriya sharma", batch: "2021", por: "PRESIDENT", contact: "", src: "/core-49.png", alt: "49" },
+  { id: 49, name: "Priya sharma", batch: "2021", por: "PRESIDENT", contact: "", src: "/core-49.png", alt: "49" },
   { id: 50, name: "Shanmukh", batch: "2021", por: "GENERAL SECRETARY", contact: "", src: "/core-50.png", alt: "50" },
   { id: 51, name: "Atharva pratap singh", batch: "2022", por: "VICE PRESIDENT", contact: "", src: "/core-51.png", alt: "51" },
   { id: 52, name: "Krishna gupta", batch: "2021", por: "TREASURER", contact: "", src: "/core-52.png", alt: "52" },
@@ -81,6 +81,16 @@ const Team = () => {
 
   const fixedMembers = members.filter((member) => member.batch === "2021");
 
+  const president = fixedMembers.find((member) => member.por.toLowerCase() === "president");
+  const generalSecretary = fixedMembers.find((member) => member.por.toLowerCase() === "general secretary");
+  const treasurer = fixedMembers.find((member) => member.por.toLowerCase() === "treasurer");
+  const otherMembers = fixedMembers.filter(
+    (member) =>
+      member.por.toLowerCase() !== "president" &&
+      member.por.toLowerCase() !== "general secretary" &&
+      member.por.toLowerCase() !== "treasurer"
+  );
+
   const filteredMembers = members.filter((member) => {
     return (
       (selectedBatch === "All" || member.batch === selectedBatch) &&
@@ -95,15 +105,53 @@ const Team = () => {
       </h1>
 
       {/* Fixed 2021 Batch Members */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-        {fixedMembers.map((member) => (
-          <div
-            key={member.id}
-            className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-          >
-            <Member2 member={member} />
+      <div className="grid grid-cols-1 gap-6 mb-6">
+        {/* President in the center of the first row */}
+        {president && (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div></div>
+            <div
+              key={president.id}
+            >
+              <Member2 member={president} />
+            </div>
+            <div></div>
           </div>
-        ))}
+        )}
+
+        {/* General Secretary and Treasurer in the second row */}
+{(generalSecretary || treasurer) && (
+  <div className="md:flex justify-center gap-10 mb-6">
+    {generalSecretary && (
+      <div
+        key={generalSecretary.id}
+      >
+        <Member2 member={generalSecretary} />
+      </div>
+    )}
+    {treasurer && (
+      <div
+        key={treasurer.id}
+      >
+        <Member2 member={treasurer} />
+      </div>
+    )}
+  </div>
+)}
+
+
+
+        {/* Other members in subsequent rows */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {otherMembers.map((member) => (
+            <div
+              key={member.id}
+             
+            >
+              <Member2 member={member} />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Filters */}
