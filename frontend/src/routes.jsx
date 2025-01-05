@@ -3,6 +3,7 @@ import MainLayout from "./layouts/MainLayout.jsx";
 import Team from "./pages/Team.jsx"; // Import the Team page component
 import Events from "./pages/Events.jsx";
 import About from "./pages/About.jsx"; // Import the About page component
+import Gallery from "./pages/Gallery.jsx";
 import Home from "./pages/Home.jsx"
 import { createBrowserRouter } from "react-router-dom";
 
@@ -26,6 +27,10 @@ const routes = createBrowserRouter([
       {
         path:"/about",  //Route for About page
         element:<About/>
+      },
+      {
+        path:"/gallery",  //Route for About page
+        element:<Gallery/>
       },
     ],
   },

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "framer-motion": "^11.15.0",
+    "lightgallery": "^2.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable": "^4.4.6",
