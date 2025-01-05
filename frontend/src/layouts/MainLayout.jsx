@@ -5,6 +5,7 @@ import RunningTruck from '../components/RunningTruck';
 import Navbar from '../components/Navbar';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import Footer from '../components/Footer';
 
 const MainLayout = () => {
   const [isTruckRunning, setIsTruckRunning] = useState(true);
@@ -35,6 +36,7 @@ const MainLayout = () => {
             <div>
               <Outlet />
             </div>
+            <Footer />
           </div>
         )
       }
