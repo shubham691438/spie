@@ -42,9 +42,7 @@ const Navbar = () => {
         <Link to="/student-activity" className="hover:underline">
           Student Activity
         </Link>
-        <Link to="/register" className="hover:underline">
-          Register
-        </Link>
+        
       </div>
 
       {/* Action Buttons */}
@@ -52,9 +50,9 @@ const Navbar = () => {
        
 
         {/* Sign In Button Connected to Register Page */}
-        <Link to="/signin">
+        <Link to="/register">
           <button className="bg-blue-600 px-4 py-2 rounded-md text-white hover:bg-blue-800">
-            Sign In
+            Register
           </button>
         </Link>
 
@@ -105,9 +103,9 @@ const Navbar = () => {
             <Link to="/student-activity" className="block hover:underline mb-2">
               Student Activity
             </Link>
-            <Link to="/register" className="block hover:underline mb-2">
+            {/* <Link to="/register" className="block hover:underline mb-2">
               Register
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}
