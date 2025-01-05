@@ -22,7 +22,7 @@ const App = () => {
       <div>
         <div>
           {/* Section 1 */}
-          <section className="bg-gray-900">
+          <section className="bg-gray-900 mx-2">
             <div className="flex flex-col md:flex-row justify-between items-center py-8 px-4 mx-auto max-w-screen-xl gap-8 lg:gap-16 lg:px-6">
               {/* Image Container */}
               <div className="relative border border-white/[0.2] p-4 w-full md:w-2/4 rounded-lg">
@@ -97,7 +97,7 @@ const App = () => {
  
       {/* Vision And Mission Section */}
       <div>
-        <section className="bg-gray-800">
+        <section className="bg-gray-800 mx-4">
           <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
             {/* Text Content */}
             <div className="font-light sm:text-lg text-gray-400 text-left">
