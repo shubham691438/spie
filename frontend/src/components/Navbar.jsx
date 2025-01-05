@@ -46,7 +46,7 @@ const Navbar = () => {
       </div>
 
       {/* Action Buttons */}
-      <div className="flex items-center gap-2">
+      <div className="hidden lg:flex items-center gap-2">
        
 
         {/* Sign In Button Connected to Register Page */}
@@ -55,7 +55,7 @@ const Navbar = () => {
             Register
           </button>
         </Link>
-
+      </div>
         {/* Mobile Menu Toggle */}
         <button
           className="lg:hidden block text-white"
@@ -76,11 +76,11 @@ const Navbar = () => {
             />
           </svg>
         </button>
-      </div>
+      
 
       {/* Mobile Menu */}
       {isMenu && (
-        <div className="absolute top-16 left-0 w-full   bg-blue-200 text-black p-4 lg:hidden z-10">
+        <div className="absolute top-16 left-0 w-full   bg-customGray text-white p-4 lg:hidden z-10">
           <div>
             <Link to="/" className="block hover:underline mb-2">
               Home
@@ -103,6 +103,16 @@ const Navbar = () => {
             <Link to="/student-activity" className="block hover:underline mb-2">
               Student Activity
             </Link>
+            <div className="items-center gap-2">
+       
+
+        {/* Sign In Button Connected to Register Page */}
+        <Link to="/register">
+          <button className="bg-blue-600 px-4 py-2 rounded-md text-white hover:bg-blue-800">
+            Register
+          </button>
+        </Link>
+      </div>
             {/* <Link to="/register" className="block hover:underline mb-2">
               Register
             </Link> */}
