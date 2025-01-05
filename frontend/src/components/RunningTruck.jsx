@@ -59,17 +59,22 @@ const RunningTruck = ({ setIsTruckRunning }) => {
   return (
     <div >
     {/* Instruction Text */}
-    {!isPlaying && <div className='fixed top-[450px] left-2/4  z-20'>
-      <div className="transform -translate-x-1/2 bg-black bg-opacity-60 text-white text-lg px-4 py-2 rounded-md z-10 text-center ">
-        Pack the delivery box onto the truck to kickstart the adventure!
+    {!isPlaying && (
+      <div className="fixed bottom-[30%] md:bottom-0 sm:top-[450px] left-1/2 z-20 ">
+        <div className="transform -translate-x-1/2 bg-black bg-opacity-60 text-white text-base sm:text-lg px-3 sm:px-4 py-2 rounded-md text-center">
+          Pack the delivery box onto the truck to kickstart the adventure!
+        </div>
+        {/* <img
+          src={PointingDownIcon}
+          className="transform -translate-x-1/2 w-16 h-16 sm:w-20 sm:h-20 object-contain z-20 animate-bounce"
+        /> */}
       </div>
-      {/* <img src={PointingDownIcon} className=' transform -translate-x-1/2 w-20 h-20 object-contain z-20 animate-bounce'/> */}
-    </div>}
+    )}
 
   {/* Background Video */}
   <video
     ref={videoRef}
-    className="fixed min-w-full min-h-full right-0 bottom-0 "
+    className="fixed min-w-full min-h-full right-0 bottom-0 bg-black"
     loop
     muted
   >
@@ -91,13 +96,13 @@ const RunningTruck = ({ setIsTruckRunning }) => {
       onStop={handleStop}
 
     >
-      <div className={`handle absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center animate-pulse ${
+      <div className={`handle absolute top-1/2 left-8 md:left-1/4 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center animate-pulse ${
           isDragging ? 'cursor-grabbing' : 'cursor-grab'
         }`}>
         <img
           src={DeliveryBoxImg}
           alt="Delivery Box"
-          className="w-20 h-20 object-contain z-0"
+          className="w-12 h-12 md:w-20 md:h-20 object-contain z-0"
           draggable="false" ondragstart="return false"
         />
       </div>
