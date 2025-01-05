@@ -1,18 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   
-  const [isMenu, setMenu] = useState(false);
-
-
- 
-
+  const [menuOpen, setMenu] = useState(false);
+  const menuref = useRef(null);
+  
   const toggleMenu = () => {
     setMenu((prev) => !prev);
   };
 
+  useEffect(() => {
+    const handleclickOutside = (event) => {
+      if (menuref.current && !menuref.current.contains(event.target)) {
+        setMenu(false);
+      }
+    };
+    document.addEventListener('mousedown', handleclickOutside);
   
+    return () => {
+      document.removeEventListener('mousedown', handleclickOutside);
+    };
+  }, []);
 
   return (
     <nav className="bg-gray-900  text-white   p-2 flex items-center justify-between relative">
@@ -79,28 +88,28 @@ const Navbar = () => {
       
 
       {/* Mobile Menu */}
-      {isMenu && (
-        <div className="absolute top-16 left-0 w-full   bg-customGray text-white p-4 lg:hidden z-10">
+      {menuOpen && (
+        <div ref={menuref} className="absolute top-16 left-0 w-full   bg-customGray text-white p-4 lg:hidden z-10">
           <div>
-            <Link to="/" className="block hover:underline mb-2">
+            <Link to="/" className="block hover:underline mb-2" onClick={toggleMenu}>
               Home
             </Link>
-            <Link to="/events" className="block hover:underline mb-2">
+            <Link to="/events" className="block hover:underline mb-2" onClick={toggleMenu}>
               Events
             </Link>
-            <Link to="/team" className="block hover:underline mb-2">
+            <Link to="/team" className="block hover:underline mb-2" onClick={toggleMenu}>
               Team
             </Link>
-            <Link to="/about" className="block hover:underline mb-2">
+            <Link to="/about" className="block hover:underline mb-2" onClick={toggleMenu}>
               About
             </Link>
-            <Link to="/blog" className="block hover:underline mb-2">
+            <Link to="/blog" className="block hover:underline mb-2" onClick={toggleMenu}>
               Blog
             </Link>
-            <Link to="/gallery" className="block hover:underline mb-2">
+            <Link to="/gallery" className="block hover:underline mb-2" onClick={toggleMenu}>
               Gallery
             </Link>
-            <Link to="/student-activity" className="block hover:underline mb-2">
+            <Link to="/student-activity" className="block hover:underline mb-2" onClick={toggleMenu}>
               Student Activity
             </Link>
             <div className="items-center gap-2">
@@ -108,7 +117,7 @@ const Navbar = () => {
 
         {/* Sign In Button Connected to Register Page */}
         <Link to="/register">
-          <button className="bg-blue-600 px-4 py-2 rounded-md text-white hover:bg-blue-800">
+          <button className="bg-blue-600 px-4 py-2 rounded-md text-white hover:bg-blue-800" onClick={toggleMenu}>
             Register
           </button>
         </Link>
