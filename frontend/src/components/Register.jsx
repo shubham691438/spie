@@ -1,31 +1,53 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import FormfacadeEmbed from "@formfacade/embed-react";
 
 const Register = () => {
-  const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   
+  
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    // Simulate page load completion
+    const handlePageLoad = () => setIsLoading(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Registration Successful! Redirecting to Sign In page...");
-    navigate("/signin");
-  };
+    // Use window.onload to detect when the page is fully loaded
+    // if (document.readyState === "complete" ) {
+    //   handlePageLoad();
+    // } else {
+    //   window.addEventListener("load", handlePageLoad);
+    // }
+
+    setTimeout(() => {
+      handlePageLoad();
+    }, 3000);
+
+    // Cleanup event listener
+    return () => window.removeEventListener("load", handlePageLoad);
+  }, []);
 
   return (
+    <>
+      {isLoading ? (
+        // Loader component
+        <div className="fixed inset-0 flex justify-center items-center bg-black text-white">
+          {/* <div className="loader">Loading...</div> */}
+          <div class="loader"></div>
+        </div>
+      ) : (
+        // Your main application
+        <div >
+          <FormfacadeEmbed
 
-    <div>
-      <FormfacadeEmbed
+          formFacadeURL="https://formfacade.com/include/107273075676913643495/form/1FAIpQLScbEY-q6R71VkyCMUmR-dMTUVdf_fxYD1637Gv94pIqcucZWQ/classic.js/?div=ff-compose"
 
-      formFacadeURL="https://formfacade.com/include/107273075676913643495/form/1FAIpQLScbEY-q6R71VkyCMUmR-dMTUVdf_fxYD1637Gv94pIqcucZWQ/classic.js/?div=ff-compose"
+          onSubmitForm={() =>alert('Form submitted')}
 
-      onSubmitForm={() => console.log('Form submitted')}
-
-      />
+          />
+        
+        </div>
+      )}
+    </>
     
-    </div>
   );
 };
 

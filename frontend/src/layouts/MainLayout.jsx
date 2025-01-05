@@ -32,7 +32,7 @@ const MainLayout = () => {
           <RunningTruck setIsTruckRunning={setIsTruckRunning} />
         )
         : (
-          <div>
+          <div className='min-h-screen'>
             <Navbar /> 
             <div>
               <Outlet />
