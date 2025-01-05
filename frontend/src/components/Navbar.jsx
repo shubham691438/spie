@@ -58,7 +58,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden block text-black"
+          className="lg:hidden block text-white"
           onClick={toggleMenu}
         >
           <svg
@@ -80,7 +80,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenu && (
-        <div className="absolute top-16 left-0 w-full   bg-white text-black p-4 lg:hidden z-10">
+        <div className="absolute top-16 left-0 w-full   bg-blue-200 text-black p-4 lg:hidden z-10">
           <div>
             <Link to="/" className="block hover:underline mb-2">
               Home
