@@ -51,10 +51,12 @@ const Navbar = () => {
       <div className="flex items-center gap-2">
        
 
-        {/* Sign In Button */}
-        <button className="bg-blue-600 px-4 py-2 rounded-md text-white hover:bg-blue-800">
-          Sign In
-        </button>
+        {/* Sign In Button Connected to Register Page */}
+        <Link to="/signin">
+          <button className="bg-blue-600 px-4 py-2 rounded-md text-white hover:bg-blue-800">
+            Sign In
+          </button>
+        </Link>
 
         {/* Mobile Menu Toggle */}
         <button
