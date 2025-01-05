@@ -10,13 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "apexcharts": "^4.3.0",
+    "clsx": "^2.1.1",
+    "flowbite": "^2.5.2",
     "framer-motion": "^11.15.0",
     "lightgallery": "^2.8.2",
     "react": "^18.2.0",
+    "react-apexcharts": "^1.7.0",
     "react-dom": "^18.2.0",
     "react-draggable": "^4.4.6",
     "react-router-dom": "^7.0.1",
-    "scrollmagic": "^2.0.8"
+    "scrollmagic": "^2.0.8",
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
