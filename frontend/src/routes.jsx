@@ -30,7 +30,11 @@ const routes = createBrowserRouter([
         element:<About/>
       },
       {
-        path:"/gallery",  //Route for About page
+        path:"/blog",  //Route for Blog page
+        element:<Blog/>
+      },
+      {
+        path:"/gallery",  //Route for Gallery page
         element:<Gallery/>
       },
     ],
