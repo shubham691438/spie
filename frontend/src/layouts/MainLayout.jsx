@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Footer from '../components/Footer';
+import { TracingBeam } from '../components/ui/tracing-beam';
 
 const MainLayout = () => {
   const [isTruckRunning, setIsTruckRunning] = useState(true);

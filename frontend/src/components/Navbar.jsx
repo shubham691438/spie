@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-900  text-white   p-2 flex items-center justify-between relative">
       
-      <div className="text-2xl font-bold">SPIE-NITJSR</div>
+      <div className="text-2xl font-bold"><img src="https://spie.nitjsr.com/wp-content/uploads/2024/03/SPIE-2048x2048.png" class="mr-3 h-28" alt="FlowBite Logo" /></div>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-4">

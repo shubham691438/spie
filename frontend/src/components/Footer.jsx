@@ -7,7 +7,7 @@ const Footer = () => {
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="" class="flex items-center">
-                    <img src="https://prodyog.nitjsr.com/wp-content/uploads/2024/04/prodyog-1.png" class="mr-3 h-20" alt="FlowBite Logo" />
+                    <img src="https://spie.nitjsr.com/wp-content/uploads/2024/03/SPIE-2048x2048.png" class="mr-3 h-20" alt="spie Logo" />
                     {/* <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> */}
                 </a>
             </div>

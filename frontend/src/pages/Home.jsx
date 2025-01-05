@@ -6,6 +6,7 @@ import gear3 from "../assets/img/gear3.png";
 import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
 import { HomeEvents } from "../components/HomeEvents";
 import Placement from "../components/Placement";
+import { TracingBeam } from "../components/ui/tracing-beam";
 
 const App = () => {
   const { scrollY } = useScroll();
@@ -60,6 +61,7 @@ const App = () => {
       
       </div>
 
+<TracingBeam>
       {/* Message from Director and Vice Chairman */}
 <div>
   <div>
@@ -170,6 +172,7 @@ const App = () => {
       </div>
 
       <Placement />
+    </TracingBeam>  
     </div>
   );
 };
