@@ -6,6 +6,8 @@ import About from "./pages/About.jsx"; // Import the About page component
 import Gallery from "./pages/Gallery.jsx";
 import Home from "./pages/Home.jsx"
 import Blog from "./pages/Blog.jsx";
+import Register from "./components/Register.jsx";
+import SignIn from "./components/SignIn.jsx";
 import { createBrowserRouter } from "react-router-dom";
 
 const routes = createBrowserRouter([
@@ -36,6 +38,14 @@ const routes = createBrowserRouter([
       {
         path:"/gallery",  //Route for Gallery page
         element:<Gallery/>
+      },
+      {
+        path:"/Register",  //Route for blog page
+        element:<Register/>
+      },
+      {
+        path: "/signin",  // Route for sign-in page
+        element: <SignIn />,  
       },
     ],
   },

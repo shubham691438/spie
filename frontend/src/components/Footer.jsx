@@ -16,10 +16,10 @@ const Footer = () => {
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Home</h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="" class="hover:underline">About Us</a>
+                            <a href="/about" class="hover:underline">About Us</a>
                         </li>
                         <li>
-                            <a href="" class="hover:underline">Team</a>
+                            <a href="/Team" class="hover:underline">Team</a>
                         </li>
                     </ul>
                 </div>
@@ -27,10 +27,10 @@ const Footer = () => {
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Events</h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="" class="hover:underline ">Blog</a>
+                            <a href="/Blog" class="hover:underline ">Blog</a>
                         </li>
                         <li>
-                            <a href="" class="hover:underline">Gallery</a>
+                            <a href="/Gallery" class="hover:underline">Gallery</a>
                         </li>
                     </ul>
                 </div>

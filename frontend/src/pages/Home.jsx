@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import gear1 from "../assets/img/gear1.png";
 import gear2 from "../assets/img/gear2.png";
 import gear3 from "../assets/img/gear3.png";
+import { useNavigate } from "react-router-dom";
 import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
 import { HomeEvents } from "../components/HomeEvents";
 import Placement from "../components/Placement";
@@ -13,6 +14,10 @@ const App = () => {
   const rotateGear1 = useTransform(scrollY, [0, 1000], [0, 360]);
   const rotateGear2 = useTransform(scrollY, [0, 1000], [0, -360]);
   const rotateGear3 = useTransform(scrollY, [0, 1000], [0, -720]);
+  const navigate = useNavigate();
+  const handleButtonClick = () => {
+    navigate("/register");
+  }
 
   return (
     <div>
@@ -33,7 +38,11 @@ const App = () => {
                 className="bg-black  text-white flex items-center space-x-2"
               >
                 <AceternityLogo />
-                <span>Register Now</span>
+                <span
+                onClick={() => navigate("/register")}
+                >
+                  Register Now
+                </span>
               </HoverBorderGradient>
             </div>
         </div>
