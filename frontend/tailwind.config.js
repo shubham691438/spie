@@ -27,6 +27,7 @@ export default {
       colors: {
         primary: "#00e0ff",
         secondary: "#121212",
+        customGray: '#374151',
       },
       keyframes: {
         glitcher: {
