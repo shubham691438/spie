@@ -79,10 +79,8 @@ const Team = () => {
 
   const porOptions = ["All", ...new Set(members.map((member) => member.por.toUpperCase()))];
 
-  // Separate fixed 2021 batch members
   const fixedMembers = members.filter((member) => member.batch === "2021");
 
-  // Filtered members including all batches based on selected batch and PoR
   const filteredMembers = members.filter((member) => {
     return (
       (selectedBatch === "All" || member.batch === selectedBatch) &&
