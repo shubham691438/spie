@@ -21,54 +21,74 @@ const App = () => {
 
   return (
     <div>
-    <div className="min-h-screen text-white flex items-center justify-center px-4 md:px-16">
+
+    {/* Hero Section */}
+    <div className="min-h-[43.5rem] md:min-h-screen  text-white flex items-center justify-center px-4 md:px-16">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 w-full">
+        {/* Left Section */}
         <div className="text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold">SPIE</h1>
-          <h2 className="mt-4 text-xl md:text-2xl font-bold">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">SPIE</h1>
+          <h2 className="mt-4 text-lg sm:text-xl md:text-2xl font-bold">
             Society of Production & Industrial Engineering
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 mt-4">
-          Where creativity meets logic, turning challenges into opportunities and processes into perfection
+          <p className="text-sm sm:text-base md:text-lg text-gray-400 mt-4">
+            Where creativity meets logic, turning challenges into opportunities and processes into perfection
           </p>
-            <div className="mt-6 flex justify-start text-center">
-              <HoverBorderGradient
-                containerClassName="rounded-full"
-                as="button"
-                className="bg-black  text-white flex items-center space-x-2"
-              >
-                <AceternityLogo />
-                <span
-                onClick={() => navigate("/register")}
-                >
-                  Register Now
-                </span>
-              </HoverBorderGradient>
-            </div>
+          <div className="mt-6 flex justify-center md:justify-start">
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="bg-black text-white flex items-center space-x-2 px-6 py-3"
+            >
+              <AceternityLogo />
+              <span onClick={() => navigate("/register")}>Register Now</span>
+            </HoverBorderGradient>
+          </div>
         </div>
-        <div className="relative flex justify-center md:justify-end">
+
+        {/* Right Section */}
+        <div className="relative flex justify-center md:justify-end mt-24 md:mt-0">
           <motion.img
             src={gear1}
             alt="Gear 1"
-            className="absolute w-28 md:w-40 top-1/4 left-1/4 md:top-2/3 md:left-auto"
+            className="absolute w-20 sm:w-28 md:w-40 top-1/4 left-1/4 md:top-2/3 md:left-auto animate-spin-slow"
+          />
+          <motion.img
+            src={gear2}
+            alt="Gear 2"
+            className="absolute w-16 sm:w-24 md:w-36 top-1/2 right-1/4 animate-spin-reverse"
+          />
+          <motion.img
+            src={gear3}
+            alt="Gear 3"
+            className="absolute w-14 sm:w-20 md:w-28 bottom-1/4 left-1/3 md:left-auto animate-spin-faster"
+          />
+        </div>
+
+        {/* <div className="relative flex justify-center md:justify-end mt-24 md:mt-0">
+          <motion.img
+            src={gear1}
+            alt="Gear 1"
+            className="absolute w-20 sm:w-28 md:w-40 top-1/4 left-1/4 md:top-2/3 md:left-auto"
             style={{ rotate: rotateGear1 }}
           />
           <motion.img
             src={gear2}
             alt="Gear 2"
-            className="absolute w-24 md:w-36 top-1/2 right-1/4"
+            className="absolute w-16 sm:w-24 md:w-36 top-1/2 right-1/4"
             style={{ rotate: rotateGear2 }}
           />
           <motion.img
             src={gear3}
             alt="Gear 3"
-            className="absolute w-20 md:w-28 bottom-1/4 left-1/2 md:left-auto"
+            className="absolute w-14 sm:w-20 md:w-28 bottom-1/4 left-1/3 md:left-auto"
             style={{ rotate: rotateGear3 }}
           />
-        </div>
+        </div> */}
+
       </div>
-      
-      </div>
+    </div>
+
 
 <TracingBeam>
       {/* Message from Director and Vice Chairman */}
