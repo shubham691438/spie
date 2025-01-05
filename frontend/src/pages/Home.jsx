@@ -57,7 +57,7 @@ const App = () => {
           </section>
 
           {/* Section 2 */}
-          <section className="bg-gray-900">
+          <section className="bg-gray-900 mx-2">
             <div className="flex flex-col-reverse md:flex-row justify-between items-center py-8 px-4 mx-auto max-w-screen-xl gap-8 lg:gap-16 lg:px-6">
               {/* Text Content */}
               <div className="mt-4 md:mt-0 text-center md:text-left">
@@ -136,7 +136,7 @@ const App = () => {
       <div className="mt-10">
         <h2 className="text-6xl font-extrabold text-white">Major Events</h2>
         <HomeEvents />
-        <div className="md:ml-64 flex  text-center">
+        <div className="md:ml-48 flex justify-center md:justify-start text-center">
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 as="button"
