@@ -8,6 +8,7 @@ import Home from "./pages/Home.jsx"
 import Blog from "./pages/Blog.jsx";
 import Register from "./components/Register.jsx";
 import SignIn from "./components/SignIn.jsx";
+import Contact from "./components/Contact.jsx";
 import { createBrowserRouter } from "react-router-dom";
 
 const routes = createBrowserRouter([
@@ -46,6 +47,10 @@ const routes = createBrowserRouter([
       {
         path: "/signin",  // Route for sign-in page
         element: <SignIn />,  
+      },
+      {
+        path: "/contact",  // Route for sign-in page
+        element: <Contact />,  
       },
     ],
   },
