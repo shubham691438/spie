@@ -24,7 +24,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"><a href="/events" class="hover:underline">Events</a></h2>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"><Link to="/events" class="hover:underline">Events</Link></h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
                             <a href="/blog" class="hover:underline ">Blog</a>
