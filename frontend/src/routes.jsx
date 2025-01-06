@@ -12,6 +12,11 @@ import Contact from "./components/Contact.jsx";
 import { createBrowserRouter } from "react-router-dom";
 import ComingSoon from "./components/Comingsoon.jsx";
 import DataHackonRulebook from "./event/DataHackon.jsx";
+import Gatestudy from "./blogs/Gatestudy.jsx";
+import Subjectrelated from "./blogs/Subject-related.jsx";
+import Senioradvice from "./blogs/Senioradvice.jsx";
+import Funevent from "./blogs/Funevent.jsx";
+import PlacementExperience from "./blogs/PlacementExperience.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -60,23 +65,23 @@ const routes = createBrowserRouter([
       },
       {
         path: "/placement-experience",  // Route for sign-in page
-        element: <ComingSoon/>,  
+        element: <PlacementExperience/>,  
       },
       {
         path: "/fun-events-experiences",  // Route for sign-in page
-        element: <ComingSoon/>,  
+        element: <Funevent/>,  
       },
       {
         path: "/seniors-advice",  // Route for sign-in page
-        element: <ComingSoon/>,  
+        element: <Senioradvice/>,  
       },
       {
         path: "/subject-related",  // Route for sign-in page
-        element: <ComingSoon/>,  
+        element: <Subjectrelated/>,  
       },
       {
         path: "/gate-study-materials",  // Route for sign-in page
-        element: <ComingSoon/>,  
+        element: <Gatestudy/>,  
       },
       {
         path: "/datahackon",
