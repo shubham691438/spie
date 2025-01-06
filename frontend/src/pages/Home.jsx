@@ -9,6 +9,7 @@ import { HomeEvents } from "../components/HomeEvents";
 import Placement from "../components/Placement";
 import { TracingBeam } from "../components/ui/tracing-beam";
 import HeroSection from "../components/HeroSection";
+import { Link } from "react-router-dom";
 
 const App = () => {
   
@@ -143,7 +144,7 @@ const App = () => {
                 className="bg-black  text-white flex items-center space-x-2"
               >
                 <AceternityLogo />
-                <span>Know More ...</span>
+                <Link to='/events'><span>Know More ...</span></Link>
               </HoverBorderGradient>
         </div>
       </div>

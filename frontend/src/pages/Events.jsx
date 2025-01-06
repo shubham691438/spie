@@ -13,6 +13,11 @@ const data = [
 
 const Events = () => {
   const controllerRef = useRef(null);
+  
+    useEffect(() => {
+      // Scroll to the top of the page on component mount
+      window.scrollTo(0, 0);
+    }, []);
 
   useEffect(() => {
     // Initialize ScrollMagic controller
