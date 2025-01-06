@@ -6,26 +6,31 @@ import "scrollmagic/scrollmagic/minified/ScrollMagic.min.js";
 
 const data = [
   {
-    name: "Chain-Zenith",
-    des: "This event is designed as an immersive supply-chain case study competition tailored for students interested in pursuing careers in logistics, supply chain, operations, and consultancy sectors. It offers participants an opportunity to tackle real-world challenges under time constraints, providing a glimpse into the competitive dynamics of the industry.",
-  },
-  {
-    name: "Metal Masterpiece",
-    des: "It is an exciting competition that brings together students with a passion for machining, design and precision craftsmanship. Participants will be provided a metal workpiece , and the design will be given. The participants will have to design the workpiece as per the design using lathe machine.",
-  },
-  {
-    name: "Pratyush",
-    des: "This event provides an opportunity for the designers to showcase the optimal design solutions for the industrial parts in question using CATIA V5 software only. This software is used in design in various fields such as automobiles, manufacturing etc. making it a necessary skill to possess in industrial sectors.",
-  },
-  {
-    name: "Machina Mystique",
-    des: "The objective of Machina Mystique is to assess participants’ mechanical reasoning skills through a series of quiz questions designed to challenge their understanding of mechanical principles, problem-solving abilities, and logical reasoning.",
-  },
-  {
     name: "DataHackon",
     des: "This event is dedicated to building the basics of data analytics and data science, which is a growing field in the industry. You will use your excel and data analysis skills including data aggregation, data mining and data visualization skills to solve the problem statement.",
     route: "/datahackon", // Add a specific route for DataHackon
   },
+  {
+    name: "Chain-Zenith",
+    des: "This event is designed as an immersive supply-chain case study competition tailored for students interested in pursuing careers in logistics, supply chain, operations, and consultancy sectors. It offers participants an opportunity to tackle real-world challenges under time constraints, providing a glimpse into the competitive dynamics of the industry.",
+    route: "/Student-activity",
+  },
+  {
+    name: "Metal Masterpiece",
+    des: "It is an exciting competition that brings together students with a passion for machining, design and precision craftsmanship. Participants will be provided a metal workpiece , and the design will be given. The participants will have to design the workpiece as per the design using lathe machine.",
+    route: "/Student-activity",
+  },
+  {
+    name: "Pratyush",
+    des: "This event provides an opportunity for the designers to showcase the optimal design solutions for the industrial parts in question using CATIA V5 software only. This software is used in design in various fields such as automobiles, manufacturing etc. making it a necessary skill to possess in industrial sectors.",
+    route: "/Student-activity",
+  },
+  {
+    name: "Machina Mystique",
+    des: "The objective of Machina Mystique is to assess participants’ mechanical reasoning skills through a series of quiz questions designed to challenge their understanding of mechanical principles, problem-solving abilities, and logical reasoning.",
+    route: "/Student-activity",
+  },
+  
 ];
 
 const Events = () => {
