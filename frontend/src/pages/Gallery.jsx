@@ -1,5 +1,6 @@
 import LightGallery from 'lightgallery/react';
 import "./Gallery.css"
+import { useState, useEffect } from 'react';
 
 // import styles
 import 'lightgallery/css/lightgallery.css';
@@ -19,6 +20,7 @@ import lgFullscreen from 'lightgallery/plugins/fullscreen';
 import lgShare from 'lightgallery/plugins/share';
 import lgRotate from 'lightgallery/plugins/rotate';
 import { div } from 'framer-motion/client';
+import { TracingBeam } from '../components/ui/tracing-beam';
 
 const images = [
     { src: "/IMG-1.jpg", alt: "1" },
@@ -48,36 +50,70 @@ const images = [
 ]
 
 export function Gallery() {
+    const [isLoading, setIsLoading] = useState(true);
+      useEffect(() => {
+        // Simulate page load completion
+        const handlePageLoad = () => setIsLoading(false);
+    
+        // Use window.onload to detect when the page is fully loaded
+        // if (document.readyState === "complete" ) {
+        //   handlePageLoad();
+        // } else {
+        //   window.addEventListener("load", handlePageLoad);
+        // }
+    
+        setTimeout(() => {
+          handlePageLoad();
+        }, 2000);
+    
+        // Cleanup event listener
+        return () => window.removeEventListener("load", handlePageLoad);
+      }, []);
+
   const onInit = () => {
     console.log('lightGallery has been initialized');
   };
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col items-center py-10 px-4 sm:px-6 md:px-10 dark:bg-white dark:text-black">
-        <div className="App">
-        {/* Heading Section */}
-        <div className="mb-12 w-full text-center">
-                <h1 className="text-4xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 mb-12">
-                    WELCOME TO OUR GALLERY
-                </h1>
-            </div>
-      </div>
-            <LightGallery
-                onInit={onInit}
-                speed={500}
-                plugins={[lgThumbnail, lgZoom, lgAutoplay, lgFullscreen, lgRotate, lgShare]}
-            >
-
-                {images.map((image, index) => {
-                    return (
-                        <a href={image.src} key={index}>
-                            <img alt={image.alt} src={image.src} />
-                        </a>
-                    )
-                })}
-
-
-            </LightGallery>
+    <>
+      {isLoading ? (
+        // Loader component
+        <div className="fixed inset-0 flex justify-center items-center bg-black text-white">
+          {/* <div className="loader">Loading...</div> */}
+          <div class="loader"></div>
         </div>
+      ) : (
+        // Your main application
+        <TracingBeam>
+            <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col items-center py-10 px-4 sm:px-6 md:px-10 dark:bg-white dark:text-black">
+            <div className="App">
+            {/* Heading Section */}
+            <div className="mb-12 w-full text-center">
+                    <h1 className="text-4xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 mb-12">
+                        WELCOME TO OUR GALLERY
+                    </h1>
+                </div>
+        </div>
+                <LightGallery
+                    onInit={onInit}
+                    speed={500}
+                    plugins={[lgThumbnail, lgZoom, lgAutoplay, lgFullscreen, lgRotate, lgShare]}
+                >
+
+                    {images.map((image, index) => {
+                        return (
+                            <a href={image.src} key={index}>
+                                <img alt={image.alt} src={image.src} />
+                            </a>
+                        )
+                    })}
+
+
+                </LightGallery>
+            </div>
+        </TracingBeam>
+      )}
+    </>
+    
     );
 }
 
