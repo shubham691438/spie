@@ -57,6 +57,26 @@ const routes = createBrowserRouter([
         path: "/Student-activity",  // Route for sign-in page
         element: <ComingSoon/>,  
       },
+      {
+        path: "/placement-experience",  // Route for sign-in page
+        element: <ComingSoon/>,  
+      },
+      {
+        path: "/fun-events-experiences",  // Route for sign-in page
+        element: <ComingSoon/>,  
+      },
+      {
+        path: "/seniors-advice",  // Route for sign-in page
+        element: <ComingSoon/>,  
+      },
+      {
+        path: "/subject-related",  // Route for sign-in page
+        element: <ComingSoon/>,  
+      },
+      {
+        path: "/gate-study-materials",  // Route for sign-in page
+        element: <ComingSoon/>,  
+      },
     ],
   },
 ]);
