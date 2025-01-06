@@ -1,5 +1,6 @@
 import LightGallery from 'lightgallery/react';
 import "./Gallery.css"
+import { useState, useEffect } from 'react';
 
 // import styles
 import 'lightgallery/css/lightgallery.css';
@@ -48,11 +49,40 @@ const images = [
 ]
 
 export function Gallery() {
+    const [isLoading, setIsLoading] = useState(true);
+      useEffect(() => {
+        // Simulate page load completion
+        const handlePageLoad = () => setIsLoading(false);
+    
+        // Use window.onload to detect when the page is fully loaded
+        // if (document.readyState === "complete" ) {
+        //   handlePageLoad();
+        // } else {
+        //   window.addEventListener("load", handlePageLoad);
+        // }
+    
+        setTimeout(() => {
+          handlePageLoad();
+        }, 3000);
+    
+        // Cleanup event listener
+        return () => window.removeEventListener("load", handlePageLoad);
+      }, []);
+
   const onInit = () => {
     console.log('lightGallery has been initialized');
   };
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col items-center py-10 px-4 sm:px-6 md:px-10 dark:bg-white dark:text-black">
+    <>
+      {isLoading ? (
+        // Loader component
+        <div className="fixed inset-0 flex justify-center items-center bg-black text-white">
+          {/* <div className="loader">Loading...</div> */}
+          <div class="loader"></div>
+        </div>
+      ) : (
+        // Your main application
+        <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col items-center py-10 px-4 sm:px-6 md:px-10 dark:bg-white dark:text-black">
         <div className="App">
         {/* Heading Section */}
         <div className="mb-12 w-full text-center">
@@ -78,6 +108,9 @@ export function Gallery() {
 
             </LightGallery>
         </div>
+      )}
+    </>
+    
     );
 }
 
