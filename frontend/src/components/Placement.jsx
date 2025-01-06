@@ -41,7 +41,7 @@ const Placement = () => {
               Average Placement Percentage
             </p>
           </div>
-          <Chart options={options} series={series} type="area" height={200} />
+          <Chart options={optionsPercentage} series={seriesPercentage} type="area" height={200} />
           <div className="flex justify-center pt-5">
             <button
               className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
@@ -57,7 +57,7 @@ const Placement = () => {
               Average CTC (Cost to Company)
             </p>
           </div>
-          <Chart options={options} series={series} type="area" height={200} />
+          <Chart options={optionsAverage} series={seriesAverage} type="area" height={200} />
           <div className="flex justify-center pt-5">
             <button
               className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
@@ -77,7 +77,7 @@ export default Placement;
 
 
 
-const options = {
+const optionsPercentage = {
     chart: {
         height: "100%",
         maxWidth: "100%",
@@ -123,7 +123,7 @@ const options = {
     series: [
         {
             name: "Placement Percentage",
-            data: [6418, 6456, 6526, 6356, 95.56],
+            data: [ 89.47, 86.1, 97.6, 97.61, 95.56],
             color: "#1A56DB",
         },
     ],
@@ -143,11 +143,84 @@ const options = {
         show: true,
     },
 };
-const series = [
+
+const optionsAverage = {
+  chart: {
+      height: "100%",
+      maxWidth: "100%",
+      type: "area",
+      fontFamily: "Inter, sans-serif",
+      dropShadow: {
+          enabled: false,
+      },
+      toolbar: {
+          show: false,
+      },
+  },
+  tooltip: {
+      enabled: true,
+      x: {
+          show: false,
+      },
+  },
+  fill: {
+      type: "gradient",
+      gradient: {
+          opacityFrom: 0.55,
+          opacityTo: 0,
+          shade: "#1C64F2",
+          gradientToColors: ["#1C64F2"],
+      },
+  },
+  dataLabels: {
+      enabled: false,
+  },
+  stroke: {
+      width: 6,
+  },
+  grid: {
+      show: false,
+      strokeDashArray: 4,
+      padding: {
+          left: 2,
+          right: 2,
+          top: 0,
+      },
+  },
+  series: [
+      {
+          name: "Average",
+          data: [ 6.72, 8.74, 10.17, 11.37, 8.26],
+          color: "#1A56DB",
+      },
+  ],
+  xaxis: {
+      categories: ["2020", "2021", "2022", "2023", "2024"],
+      labels: {
+          show: true,
+      },
+      axisBorder: {
+          show: false,
+      },
+      axisTicks: {
+          show: false,
+      },
+  },
+  yaxis: {
+      show: true,
+  },
+};
+const seriesPercentage = [
     {
         name: "Placement Percentage",
-        data: [ 6418, 6456, 6526, 6356, 95.56],
+        data: [ 89.47, 86.1, 97.6, 97.61, 95.56],
     },
+];
+const seriesAverage = [
+  {
+      name: "Placement Avearege",
+      data: [ 6.72, 8.74, 10.17, 11.37, 8.26],
+  },
 ];
 
 const chartOptions = {
