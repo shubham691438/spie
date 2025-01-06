@@ -10,6 +10,8 @@ import Placement from "../components/Placement";
 import { TracingBeam } from "../components/ui/tracing-beam";
 import HeroSection from "../components/HeroSection";
 import { Link } from "react-router-dom";
+import HodImage from '../assets/img/hod-image.png'
+import VCImage from '../assets/img/vice-chairman-image.png'
 
 const App = () => {
   
@@ -33,7 +35,7 @@ const App = () => {
                 <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-white" />
                 <img
                   className="object-cover rounded-md w-full h-auto"
-                  src="https://www.nitjsr.ac.in/static/media/hod_prod.ce4207e1a4a0ef31db34.jpg"
+                  src={HodImage}
                   alt="Director's image"
                 />
               </div>
@@ -85,7 +87,7 @@ const App = () => {
                 <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-white" />
                 <img
                   className="object-cover rounded-md w-full h-auto"
-                  src="https://www.nitjsr.ac.in/backend/uploads/Faculty/PI114/profile/a1896d08-28aa-4bf2-844c-bf3631c50d6a.jpg"
+                  src={VCImage}
                   alt="Vice Chairman's image"
                 />
               </div>
