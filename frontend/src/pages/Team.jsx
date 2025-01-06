@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Gear from "../components/Gear";
 import MemberCard from "../components/MemberCard";
 import Member2 from "../components/Member2";
+import { TracingBeam } from "../components/ui/tracing-beam";
 
 const members = [
   { id: 1, name: "Shresth", batch: "2022", por: "CA", contact: "", src: "/core-1.png", alt: "1" },
@@ -99,103 +100,105 @@ const Team = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col items-center py-10 dark:bg-white dark:text-black">
-      <h1 className="text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 mb-12">
-        Meet Our Team
-      </h1>
+    <TracingBeam>
+      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col items-center py-10 dark:bg-white dark:text-black">
+        <h1 className="text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 mb-12">
+          Meet Our Team
+        </h1>
 
-      {/* Fixed 2021 Batch Members */}
-      <div className="grid grid-cols-1 gap-6 mb-6">
-        {/* President in the center of the first row */}
-        {president && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div></div>
-            <div
-              key={president.id}
-            >
-              <Member2 member={president} />
+        {/* Fixed 2021 Batch Members */}
+        <div className="grid grid-cols-1 gap-6 mb-6">
+          {/* President in the center of the first row */}
+          {president && (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div></div>
+              <div
+                key={president.id}
+              >
+                <Member2 member={president} />
+              </div>
+              <div></div>
             </div>
-            <div></div>
-          </div>
-        )}
+          )}
 
-        {/* General Secretary and Treasurer in the second row */}
-{(generalSecretary || treasurer) && (
-  <div className="md:flex justify-center gap-10 mb-6">
-    {generalSecretary && (
-      <div
-        key={generalSecretary.id}
-      >
-        <Member2 member={generalSecretary} />
-      </div>
-    )}
-    {treasurer && (
-      <div
-        key={treasurer.id}
-      >
-        <Member2 member={treasurer} />
-      </div>
-    )}
-  </div>
-)}
-
-
-
-        {/* Other members in subsequent rows */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {otherMembers.map((member) => (
-            <div
-              key={member.id}
-             
-            >
-              <Member2 member={member} />
-            </div>
-          ))}
+          {/* General Secretary and Treasurer in the second row */}
+  {(generalSecretary || treasurer) && (
+    <div className="md:flex justify-center gap-10 mb-6">
+      {generalSecretary && (
+        <div
+          key={generalSecretary.id}
+        >
+          <Member2 member={generalSecretary} />
         </div>
-      </div>
-
-      {/* Filters */}
-      <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-        <div>
-          <label htmlFor="batch" className="text-xl font-medium text-gray-300 mr-4">
-            Filter by Batch:
-          </label>
-          <select
-            id="batch"
-            className="bg-gray-800 border border-gray-600 rounded-md text-white px-4 py-2 focus:outline-none focus:ring focus:ring-blue-500 transition-shadow"
-            onChange={(e) => setSelectedBatch(e.target.value)}
-          >
-            <option value="all">All</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-          </select>
+      )}
+      {treasurer && (
+        <div
+          key={treasurer.id}
+        >
+          <Member2 member={treasurer} />
         </div>
-
-        <div>
-          <label htmlFor="por" className="text-xl font-medium text-gray-300 mr-4">
-            Filter by PoR:
-          </label>
-          <select
-            id="por"
-            className="bg-gray-800 border border-gray-600 rounded-md text-white px-4 py-2 focus:outline-none focus:ring focus:ring-blue-500 transition-shadow"
-            onChange={(e) => setSelectedPor(e.target.value)}
-          >
-            {porOptions.map((por) => (
-              <option key={por} value={por}>
-                {por}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      {/* Gear and Member Card */}
-      <div className="flex flex-col md:flex-row items-center gap-12">
-        <Gear members={filteredMembers} onHover={setHoveredMember} />
-        <MemberCard member={hoveredMember} />
-      </div>
+      )}
     </div>
+  )}
+
+
+
+          {/* Other members in subsequent rows */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {otherMembers.map((member) => (
+              <div
+                key={member.id}
+              
+              >
+                <Member2 member={member} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Filters */}
+        <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+          <div>
+            <label htmlFor="batch" className="text-xl font-medium text-gray-300 mr-4">
+              Filter by Batch:
+            </label>
+            <select
+              id="batch"
+              className="bg-gray-800 border border-gray-600 rounded-md text-white px-4 py-2 focus:outline-none focus:ring focus:ring-blue-500 transition-shadow"
+              onChange={(e) => setSelectedBatch(e.target.value)}
+            >
+              <option value="all">All</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+            </select>
+          </div>
+
+          <div>
+            <label htmlFor="por" className="text-xl font-medium text-gray-300 mr-4">
+              Filter by PoR:
+            </label>
+            <select
+              id="por"
+              className="bg-gray-800 border border-gray-600 rounded-md text-white px-4 py-2 focus:outline-none focus:ring focus:ring-blue-500 transition-shadow"
+              onChange={(e) => setSelectedPor(e.target.value)}
+            >
+              {porOptions.map((por) => (
+                <option key={por} value={por}>
+                  {por}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Gear and Member Card */}
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <Gear members={filteredMembers} onHover={setHoveredMember} />
+          <MemberCard member={hoveredMember} />
+        </div>
+      </div>
+    </TracingBeam>
   );
 };
 
