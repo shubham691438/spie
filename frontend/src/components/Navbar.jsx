@@ -51,6 +51,9 @@ const Navbar = () => {
         <Link to="/student-activity" className="hover:underline">
           Student Activity
         </Link>
+        <Link to="/contact" className="hover:underline">
+              Contact us
+        </Link> 
         
       </div>
 
@@ -112,6 +115,9 @@ const Navbar = () => {
             <Link to="/student-activity" className="block hover:underline mb-2" onClick={toggleMenu}>
               Student Activity
             </Link>
+            <Link to="/contact" className="block hover:underline mb-2" onClick={toggleMenu}>
+              Contact us
+            </Link> 
             <div className="items-center gap-2">
        
 

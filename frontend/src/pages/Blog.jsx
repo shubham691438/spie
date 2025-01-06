@@ -1,4 +1,5 @@
 import React from 'react';
+import ComingSoon from '../components/Comingsoon';
   const Blog = () => {
         return (
           <div id="body" className="bg-gray-900  text-white">
@@ -23,7 +24,7 @@ import React from 'react';
                 <article id="pdiv" className="flex justify-between items-center w-full mt-2 ml-2">
                   <a
                     id="link1"
-                    href="..."
+                    href="/placement-experience"
                     className="flex justify-between items-center w-full bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400  text-3xl ml-1 font-serif no-underline uppercase hover:underline hover:decoration-2  hover:decoration-cyan-400"
                     >
                     placement experience
@@ -52,7 +53,7 @@ import React from 'react';
                 <article id="pdiv" className="flex justify-between items-center w-full mt-2 ml-2">
                   <a
                     id="link1"
-                    href="......."
+                    href="/fun-events-experiences"
                     className="flex justify-between items-center w-full bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400  text-3xl ml-1 font-serif no-underline uppercase hover:underline hover:decoration-2  hover:decoration-cyan-400"
                     >
                     fun events experiences
@@ -81,7 +82,7 @@ import React from 'react';
                 <article id="pdiv" className="flex justify-between items-center w-full mt-2 ml-2">
                   <a
                     id="link1"
-                    href="......."
+                    href="seniors-advice"
                     className="flex justify-between items-center w-full bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400  text-3xl ml-1 font-serif no-underline uppercase hover:underline hover:decoration-2  hover:decoration-cyan-400"
                     >
                     seniors advice
@@ -110,7 +111,7 @@ import React from 'react';
                 <article id="pdiv" className="flex justify-between items-center w-full mt-2 ml-2">
                   <a
                     id="link1"
-                    href="....."
+                    href="subject-related"
                     className="flex justify-between items-center w-full bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400  text-3xl ml-1 font-serif no-underline uppercase hover:underline hover:decoration-2  hover:decoration-cyan-400"
                     >
                     subject related
@@ -139,7 +140,7 @@ import React from 'react';
                 <article id="pdiv" className="flex justify-between items-center w-full mt-2 ml-2">
                   <a
                     id="link1"
-                    href="https://www.google.com"
+                    href="/gate-study-materials"
                     className="flex justify-between items-center w-full bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400  text-3xl ml-1 font-serif no-underline uppercase hover:underline hover:decoration-2  hover:decoration-cyan-400"
                     >
                     gate study materials

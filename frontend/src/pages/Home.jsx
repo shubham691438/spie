@@ -12,6 +12,7 @@ import HeroSection from "../components/HeroSection";
 import { Link } from "react-router-dom";
 import HodImage from '../assets/img/hod-image.png'
 import VCImage from '../assets/img/vice-chairman-image.png'
+import TeamImage from '../assets/img/team-image.jpg'
 
 const App = () => {
   
@@ -125,7 +126,7 @@ const App = () => {
               <div className="relative">
                 <img
                   className="w-full rounded-lg object-cover"
-                  src="https://i.ibb.co/j3gcJPJ/DSC-0190.jpg"
+                  src={TeamImage}
                   alt="office content 1"
                 />
               </div>

@@ -8,7 +8,9 @@ import Home from "./pages/Home.jsx"
 import Blog from "./pages/Blog.jsx";
 import Register from "./components/Register.jsx";
 import SignIn from "./components/SignIn.jsx";
+import Contact from "./components/Contact.jsx";
 import { createBrowserRouter } from "react-router-dom";
+import ComingSoon from "./components/Comingsoon.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -46,6 +48,34 @@ const routes = createBrowserRouter([
       {
         path: "/signin",  // Route for sign-in page
         element: <SignIn />,  
+      },
+      {
+        path: "/contact",  // Route for sign-in page
+        element: <Contact />,  
+      },
+      {
+        path: "/Student-activity",  // Route for sign-in page
+        element: <ComingSoon/>,  
+      },
+      {
+        path: "/placement-experience",  // Route for sign-in page
+        element: <ComingSoon/>,  
+      },
+      {
+        path: "/fun-events-experiences",  // Route for sign-in page
+        element: <ComingSoon/>,  
+      },
+      {
+        path: "/seniors-advice",  // Route for sign-in page
+        element: <ComingSoon/>,  
+      },
+      {
+        path: "/subject-related",  // Route for sign-in page
+        element: <ComingSoon/>,  
+      },
+      {
+        path: "/gate-study-materials",  // Route for sign-in page
+        element: <ComingSoon/>,  
       },
     ],
   },
