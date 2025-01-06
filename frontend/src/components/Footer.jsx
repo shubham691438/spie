@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
@@ -7,30 +7,30 @@ const Footer = () => {
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="" class="flex items-center">
-                    <img src="https://spie.nitjsr.com/wp-content/uploads/2024/03/SPIE-2048x2048.png" class="mr-3 h-20" alt="spie Logo" />
+                    <img src="https://i.postimg.cc/QxMBprrW/logo.png" class="mr-3 h-20" alt="spie Logo" />
                     {/* <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> */}
                 </a>
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Home</h2>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"> <Link to="/" className="hover:underline">Home</Link></h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
                             <a href="/about" class="hover:underline">About Us</a>
                         </li>
                         <li>
-                            <a href="/Team" class="hover:underline">Team</a>
+                            <a href="/team" class="hover:underline">Team</a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Events</h2>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"><a href="/events" class="hover:underline">Events</a></h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="/Blog" class="hover:underline ">Blog</a>
+                            <a href="/blog" class="hover:underline ">Blog</a>
                         </li>
                         <li>
-                            <a href="/Gallery" class="hover:underline">Gallery</a>
+                            <a href="/gallery" class="hover:underline">Gallery</a>
                         </li>
                     </ul>
                 </div>
