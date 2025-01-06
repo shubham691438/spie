@@ -10,6 +10,7 @@ import Register from "./components/Register.jsx";
 import SignIn from "./components/SignIn.jsx";
 import Contact from "./components/Contact.jsx";
 import { createBrowserRouter } from "react-router-dom";
+import ComingSoon from "./components/Comingsoon.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const routes = createBrowserRouter([
       {
         path: "/contact",  // Route for sign-in page
         element: <Contact />,  
+      },
+      {
+        path: "/Student-activity",  // Route for sign-in page
+        element: <ComingSoon/>,  
       },
     ],
   },
