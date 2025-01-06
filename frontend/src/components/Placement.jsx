@@ -151,7 +151,7 @@ const series = [
 ];
 
 const chartOptions = {
-    series: [52.8, 26.8, 20.4,29,20],
+    series: [ 54.5, 9, 11.36, 13.63, 11.36],
     colors: ["#1C64F2", "#16BDCA", "#9061F9"],
     chart: {
         height: 420,
