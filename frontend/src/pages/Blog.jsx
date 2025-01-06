@@ -10,12 +10,7 @@ import ComingSoon from '../components/Comingsoon';
                 blogs
               </p>
               <nav id="nav" className="flex justify-end items-end h-20 w-36 rounded-2xl">
-                <img
-                  id="menu"
-                  src="menu.png"
-                  alt="Menu icon"
-                  className="h-10 w-10 m-2 mt-5 mr-12"
-                />
+               
               </nav>
             </header>
             <main id="main-content">
