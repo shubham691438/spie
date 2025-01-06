@@ -6,8 +6,7 @@ import ComingSoon from '../components/Comingsoon';
             <header id="first" className="flex justify-between items-center">
               <p
                 id="blog"
-                className="ml-4 m-9 text-6xl text-white uppercase animate-glitcher font-serif"
-              >
+                className="ml-4 m-9 text-6xl text-white uppercase animate-glitcher font-serif">
                 blogs
               </p>
               <nav id="nav" className="flex justify-end items-end h-20 w-36 rounded-2xl">
@@ -42,7 +41,7 @@ import ComingSoon from '../components/Comingsoon';
                   <p id="link2" className="flex justify-between items-end">
                     <img
                       id="spic"
-                      src="menu.png"
+                      src="man.png"
                       alt="Menu icon"
                       className="h-10 w-10 rounded-full mr-7 mb-4"
                     />
@@ -71,7 +70,7 @@ import ComingSoon from '../components/Comingsoon';
                   <p id="link2" className="flex justify-between items-end">
                     <img
                       id="spic"
-                      src="menu.png"
+                      src="man.png"
                       alt="Menu icon"
                       className="h-10 w-10 rounded-full mr-7 mb-4"
                     />
@@ -100,7 +99,7 @@ import ComingSoon from '../components/Comingsoon';
                   <p id="link2" className="flex justify-between items-end">
                     <img
                       id="spic"
-                      src="menu.png"
+                      src="man.png"
                       alt="Menu icon"
                       className="h-10 w-10 rounded-full mr-7 mb-4"
                     />
@@ -129,7 +128,7 @@ import ComingSoon from '../components/Comingsoon';
                   <p id="link2" className="flex justify-between items-end">
                     <img
                       id="spic"
-                      src="menu.png"
+                      src="man.png"
                       alt="Menu icon"
                       className="h-10 w-10 rounded-full mr-7 mb-4"
                     />
@@ -158,7 +157,7 @@ import ComingSoon from '../components/Comingsoon';
                   <p id="link2" className="flex justify-between items-end">
                     <img
                       id="spic"
-                      src="menu.png"
+                      src="man.png"
                       alt="Menu icon"
                       className="h-10 w-10 rounded-full mr-7 mb-4"
                     />
