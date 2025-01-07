@@ -17,6 +17,13 @@ import Subjectrelated from "./blogs/Subject-related.jsx";
 import Senioradvice from "./blogs/Senioradvice.jsx";
 import Funevent from "./blogs/Funevent.jsx";
 import PlacementExperience from "./blogs/PlacementExperience.jsx";
+import ChainZenithRulebook from "./event/ChainZenith.jsx";
+import MetalMasterpieceRulebook from "./event/MetalMasterpiece.jsx";
+import TalkathonRulebook from "./event/Talkathon.jsx";
+import MachinaMystiqueRulebook from "./event/MachinaMystique.jsx";
+import SingingRulebook from "./event/Singing.jsx";
+import DancingRulebook from "./event/Dancing.jsx";
+import StandupRulebook from "./event/Standup.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -87,6 +94,35 @@ const routes = createBrowserRouter([
         path: "/datahackon",
         element: <DataHackonRulebook />,
       },
+      {
+        path: "/chainzenith",
+        element: <ChainZenithRulebook/>,
+      },
+      {
+        path: "/metalmasterpiece",
+        element: <MetalMasterpieceRulebook/>,
+      },
+      {
+        path: "/talkathon",
+        element: <TalkathonRulebook/>,
+      }
+      ,
+      {
+        path: "/machinamystique",
+        element: <MachinaMystiqueRulebook/>,
+      } ,
+      {
+        path: "/singing",
+        element: <SingingRulebook/>,
+      } ,
+      {
+        path: "/dancing",
+        element: <DancingRulebook/>,
+      } ,
+      {
+        path: "/standup",
+        element: <StandupRulebook/>,
+      }
       
     ],
   },

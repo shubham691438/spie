@@ -1,14 +1,16 @@
 import React from 'react';
 
-const ChainZenithRulebook = () => {
+const StandupRulebook = () => {
   return (
     <div className="rulebook bg-gradient-to-r from-blue-900 via-purple-900 to-gray-900 text-white p-10 rounded-xl shadow-xl max-w-5xl mx-auto my-12 border border-gray-700">
-      <h1 className="text-4xl font-extrabold mb-8 text-center text-blue-400 tracking-wide uppercase text-white">Chain-Zenith Rulebook</h1>
+      <h1 className="text-4xl font-extrabold mb-8 text-center text-blue-400 tracking-wide uppercase text-white">Standup Event Rulebook</h1>
 
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-purple-400">Event Overview</h2>
         <p className="text-gray-300 text-lg leading-relaxed">
-        This event is a supply-chain case study competition for students interested in logistics, operations, and consultancy. Participants solve real-world challenges under time pressure, simulating industry dynamics. It offers a valuable glimpse into the competitive world of supply chain management.
+          DataHackon is a team-based competition designed to test participants' data analysis and problem-solving
+          skills. The event challenges participants to derive insights and propose solutions from a given dataset,
+          data visualizations, and problem statements.
         </p>
       </section>
 
@@ -112,4 +114,4 @@ const ChainZenithRulebook = () => {
   );
 };
 
-export default ChainZenithRulebook;
+export default StandupRulebook;
