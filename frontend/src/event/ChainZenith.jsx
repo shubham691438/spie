@@ -6,90 +6,52 @@ const ChainZenithRulebook = () => {
       <h1 className="text-4xl font-extrabold mb-8 text-center text-blue-400 tracking-wide uppercase text-white">Chain-Zenith Rulebook</h1>
 
       <section className="mb-8">
-        <h2 className="text-3xl font-semibold mb-4 text-purple-400">Event Overview</h2>
+        <h2 className="text-3xl font-semibold mb-4 text-purple-400">About the Event</h2>
         <p className="text-gray-300 text-lg leading-relaxed">
-        This event is a supply-chain case study competition for students interested in logistics, operations, and consultancy. Participants solve real-world challenges under time pressure, simulating industry dynamics. It offers a valuable glimpse into the competitive world of supply chain management.
+        Chain Zenith is an immersive competition for students aspiring to careers in logistics, supply chain, operations, and consultancy. It offers participants to tackle real-world challenges under time constraints, sharpen problem-solving and communication skills, and gain hands-on insights into the industry's dynamics.
         </p>
       </section>
 
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-purple-400">Eligibility</h2>
         <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>Participants can be from any branch and year (1st year to 3rd year).</li>
+          <li>Any undergraduate student from 1st to 4th year can participate</li>
         </ul>
       </section>
 
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-purple-400">Team Composition</h2>
         <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>Teams must consist of 2 to 3 members.</li>
+          <li>Participants can form a team of 1-2 members</li>
         </ul>
       </section>
 
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-purple-400">Event Flow</h2>
-
-        <h3 className="text-2xl font-bold mb-3 text-blue-300">1. Problem Statement Distribution</h3>
-        <p className="text-gray-300 text-lg mb-4">Details for participants based on their year:</p>
+        <p className="text-gray-300 text-lg mb-4">The competition will unfold in two rounds: </p>
+        <h3 className="text-2xl font-bold mb-3 text-blue-300">Round 1: Case study analysis:</h3>
         <ul className="list-disc list-inside text-gray-300 text-lg pl-4 mb-4">
           <li>
-            <span className="font-semibold">2nd and 3rd Year Participants:</span> Will receive a dataset and a problem
-            statement at the start of the event (online mode).
+          The participants will analyse the case study given to them and craft the presentation
           </li>
-          <li>
-            <span className="font-semibold">1st Year Participants:</span> Will receive data visualizations and problem
-            statements in offline mode.
-          </li>
-        </ul>
-        <p className="text-gray-300 text-lg leading-relaxed mb-4">
-          Clarifications regarding the dataset, data visualizations, or problem statements can be addressed to the
-          judges during the event.
-        </p>
-
-        <h3 className="text-2xl font-bold mb-3 text-blue-300">2. Analysis and Submission</h3>
+          </ul>
+          <h3 className="text-2xl font-bold mb-3 text-blue-300">Round 2: Presentation:</h3>
         <ul className="list-disc list-inside text-gray-300 text-lg pl-4 mb-4">
           <li>
-            <span className="font-semibold">2nd and 3rd Year Participants:</span> Analyze the dataset and propose
-            solutions to the problem statement. Solutions must be submitted in the format specified by the organizers
-            (e.g., .xlsx or .ppt).
+          The participants have to present the solution in-front of the judges
           </li>
-          <li>
-            <span className="font-semibold">1st Year Participants:</span> Solve questions in offline mode based on the
-            provided data visualizations and interpretations.
-          </li>
-        </ul>
-        <p className="text-gray-300 text-lg leading-relaxed mb-4">
-          Note: A bonus question will be circulated after the submission of the main problem statement round.
-        </p>
-
-        <h3 className="text-2xl font-bold mb-3 text-blue-300">3. Presentation</h3>
-        <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>
-            <span className="font-semibold">2nd and 3rd Year Participants:</span> Each selected team will present their
-            solutions to the judges. Presentations should cover analysis, methodology, and results.
-          </li>
-          <li>
-            <span className="font-semibold">1st Year Participants:</span> No presentations are required.
-          </li>
-        </ul>
+          </ul>
+       
       </section>
 
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-purple-400">Duration</h2>
         <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>
-            <span className="font-semibold">2nd and 3rd Year Participants:</span>
-            <ul className="list-disc ml-6">
-              <li>Analysis and Submission: 3 hours</li>
-              <li>Bonus Question: 30 minutes</li>
-              <li>Presentations: 10 minutes per team (for eligible teams)</li>
-            </ul>
-          </li>
-          <li>
-            <span className="font-semibold">1st Year Participants:</span> Offline event: 1 hour (solving data visual and
-            interpretation questions)
-          </li>
-        </ul>
+         {/* <ul className="list-disc ml-6"> */}
+              <li>Analysing and crafting presentation: 3 hours</li>
+              <li>Presenting the solution: 10-15 minutes</li>
+              {/* </ul> */}
+         </ul>
       </section>
 
       <section className="mb-8">
@@ -98,14 +60,10 @@ const ChainZenithRulebook = () => {
           Judges will evaluate teams based on the following:
         </p>
         <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>Innovativeness and Creativity: Novelty and originality in the approach.</li>
-          <li>Analytical Skills: Depth of analysis and effective use of data.</li>
-          <li>
-            Presentation Quality: Clarity, structure, and articulation of ideas (applicable to 2nd and 3rd years).
-          </li>
-          <li>Accuracy: How effectively the solution addresses the problem statement.</li>
-          <li>Feasibility: Practicality and implementation potential of the solution.</li>
-          <li>Bonus Question Solution Approach: Creativity and accuracy in addressing the bonus question.</li>
+          <li>Practicality and feasibility of the solution</li>
+          <li>Relevance of the solution with the problem</li>
+          <li>Optimality of the solution</li>
+         
         </ul>
       </section>
     </div>

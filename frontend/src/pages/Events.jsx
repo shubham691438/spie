@@ -8,41 +8,55 @@ const data = [
   {
     name: "DataHackon",
     des: "This event is dedicated to building the basics of data analytics and data science, which is a growing field in the industry. You will use your excel and data analysis skills including data aggregation, data mining and data visualization skills to solve the problem statement.",
+    image:"../datahackon.jpg",
     route: "/datahackon", // Add a specific route for DataHackon
   },
   {
     name: "Chain-Zenith",
     des: "It is a Supply-chain case study competition for students interested in logistics, operations, and consultancy. Participants will tackle real-world challenges under time pressure, simulating industry dynamics. It’s valuable opportunity to develop problem-solving, decision-making skills while gaining insight into supply chain.",
+    image:"../chainzenith.jpg",
     route: "/chainzenith",
   },
   {
     name: "Metal Masterpiece",
     des: "It is an exciting competition that brings together students with a passion for machining, design and precision craftsmanship. Participants will be provided a metal workpiece , and the design will be given. The participants will have to design the workpiece as per the design using lathe machine.",
+    image:"../IMG-16.jpg",
     route: "/metalmasterpiece",
   },
   {
     name: "Talkathon",
     des: "This event provides an opportunity for the designers to showcase the optimal design solutions for the industrial parts in question using CATIA V5 software only. This software is used in design in various fields such as automobiles, manufacturing etc. making it a necessary skill to possess in industrial sectors.",
+    image:"../talkathon.jpg",
     route: "/talkathon",
   },
   {
     name: "Machina Mystique",
     des: "The objective of Machina Mystique is to assess participants’ mechanical reasoning skills through a series of quiz questions designed to challenge their understanding of mechanical principles, problem-solving abilities, and logical reasoning.",
+    image:"../machinamystique.jpg",
     route: "/machinamystique",
+  },
+  {
+    name: "Mini Shark Tank",
+    des: "Welcome	to	the	deep	end	of	innovation! Get	ready	to	dive	into	a	frenzy	of	entrepreneurial	brilliance	as	we	unleash the	jaws	of	creativity	in	our	very	own	Mini	Shark	Tank	event.	Brace yourselves	for	a	feeding	frenzy	of	pitches	that	are	sure	to	make	waves	in the	business	world",
+    image:"../minishark.jpg",
+    route: "/minisharktank",
   },
   {
     name: "Singing",
     des: "The objective of Machina Mystique is to assess participants’ mechanical reasoning skills through a series of quiz questions designed to challenge their understanding of mechanical principles, problem-solving abilities, and logical reasoning.",
+    image:"../IMG-10.jpg",
     route: "/singing",
   },
   {
     name: "Dancing",
     des: "The objective of Machina Mystique is to assess participants’ mechanical reasoning skills through a series of quiz questions designed to challenge their understanding of mechanical principles, problem-solving abilities, and logical reasoning.",
+    image:"../dance.jpg",
     route: "/dancing",
   },
   {
     name: "Stand-ups",
     des: "The objective of Machina Mystique is to assess participants’ mechanical reasoning skills through a series of quiz questions designed to challenge their understanding of mechanical principles, problem-solving abilities, and logical reasoning.",
+    image:"../standup.jpg",
     route: "/standup",
   }
 ];

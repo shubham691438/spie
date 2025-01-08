@@ -6,70 +6,40 @@ const MetalMasterpieceRulebook = () => {
       <h1 className="text-4xl font-extrabold mb-8 text-center text-blue-400 tracking-wide uppercase text-white">Metal Masterpiece Rulebook</h1>
 
       <section className="mb-8">
-        <h2 className="text-3xl font-semibold mb-4 text-purple-400">Event Overview</h2>
+        <h2 className="text-3xl font-semibold mb-4 text-purple-400">About the event:</h2>
         <p className="text-gray-300 text-lg leading-relaxed">
-        This competition brings together students passionate about machining, design, and craftsmanship. Participants receive a metal workpiece and design, and must shape it using a lathe machine. It's a hands-on challenge in precision manufacturing.
+        Metal Masterpiece is an exciting competition that brings together students with a passion for engineering, design, and precision craftsmanship. In this event, participants will showcase their skills by creating unique designs using a lathe machine. From simple shapes to intricate patterns, contestants will demonstrate their creativity and technical prowess in shaping metal into stunning works of art.
         </p>
       </section>
 
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-purple-400">Eligibility</h2>
         <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>Participants can be from any branch and year (1st year to 3rd year).</li>
+          <li>Any undergraduate student from 1st to 3rd year can participate</li>
         </ul>
       </section>
 
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-purple-400">Team Composition</h2>
         <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>Teams must consist of 2 to 3 members.</li>
+          <li>Participants can form a team of 2-4 members.</li>
         </ul>
       </section>
 
       <section className="mb-8">
-        <h2 className="text-3xl font-semibold mb-4 text-purple-400">Event Flow</h2>
-
-        <h3 className="text-2xl font-bold mb-3 text-blue-300">1. Problem Statement Distribution</h3>
-        <p className="text-gray-300 text-lg mb-4">Details for participants based on their year:</p>
-        <ul className="list-disc list-inside text-gray-300 text-lg pl-4 mb-4">
+        <h2 className="text-3xl font-semibold mb-4 text-blue-300">Event Rules</h2>
+         <ul className="list-disc list-inside text-gray-300 text-lg pl-4 mb-4">
           <li>
-            <span className="font-semibold">2nd and 3rd Year Participants:</span> Will receive a dataset and a problem
-            statement at the start of the event (online mode).
+          Each team will be given a common design theme. Themes may range from geometric shapes tonature-inspired motifs.
           </li>
           <li>
-            <span className="font-semibold">1st Year Participants:</span> Will receive data visualizations and problem
-            statements in offline mode.
-          </li>
-        </ul>
-        <p className="text-gray-300 text-lg leading-relaxed mb-4">
-          Clarifications regarding the dataset, data visualizations, or problem statements can be addressed to the
-          judges during the event.
-        </p>
-
-        <h3 className="text-2xl font-bold mb-3 text-blue-300">2. Analysis and Submission</h3>
-        <ul className="list-disc list-inside text-gray-300 text-lg pl-4 mb-4">
-          <li>
-            <span className="font-semibold">2nd and 3rd Year Participants:</span> Analyze the dataset and propose
-            solutions to the problem statement. Solutions must be submitted in the format specified by the organizers
-            (e.g., .xlsx or .ppt).
+          Contestants will be provided with standard metal materials such as mild steel or others to use for their designs. Additional materials may be allowed upon request, subject to approval
           </li>
           <li>
-            <span className="font-semibold">1st Year Participants:</span> Solve questions in offline mode based on the
-            provided data visualizations and interpretations.
-          </li>
-        </ul>
-        <p className="text-gray-300 text-lg leading-relaxed mb-4">
-          Note: A bonus question will be circulated after the submission of the main problem statement round.
-        </p>
-
-        <h3 className="text-2xl font-bold mb-3 text-blue-300">3. Presentation</h3>
-        <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>
-            <span className="font-semibold">2nd and 3rd Year Participants:</span> Each selected team will present their
-            solutions to the judges. Presentations should cover analysis, methodology, and results.
+          Teams will be given a specified time limit to complete their designs
           </li>
           <li>
-            <span className="font-semibold">1st Year Participants:</span> No presentations are required.
+            <span className="font-semibold">Presentation:</span> Each team will have the opportunity to present their finished design to the judges, explaining their inspiration, design process, and any unique features or techniques employed
           </li>
         </ul>
       </section>
@@ -78,35 +48,29 @@ const MetalMasterpieceRulebook = () => {
         <h2 className="text-3xl font-semibold mb-4 text-purple-400">Duration</h2>
         <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
           <li>
-            <span className="font-semibold">2nd and 3rd Year Participants:</span>
-            <ul className="list-disc ml-6">
-              <li>Analysis and Submission: 3 hours</li>
-              <li>Bonus Question: 30 minutes</li>
-              <li>Presentations: 10 minutes per team (for eligible teams)</li>
+          Each team would be given 90 minutes to complete the job (It can be modified later)
+           </li>
             </ul>
-          </li>
-          <li>
-            <span className="font-semibold">1st Year Participants:</span> Offline event: 1 hour (solving data visual and
-            interpretation questions)
-          </li>
-        </ul>
       </section>
 
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-purple-400">Judging Criteria</h2>
-        <p className="text-gray-300 text-lg leading-relaxed mb-4">
-          Judges will evaluate teams based on the following:
-        </p>
-        <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>Innovativeness and Creativity: Novelty and originality in the approach.</li>
-          <li>Analytical Skills: Depth of analysis and effective use of data.</li>
-          <li>
-            Presentation Quality: Clarity, structure, and articulation of ideas (applicable to 2nd and 3rd years).
-          </li>
-          <li>Accuracy: How effectively the solution addresses the problem statement.</li>
-          <li>Feasibility: Practicality and implementation potential of the solution.</li>
-          <li>Bonus Question Solution Approach: Creativity and accuracy in addressing the bonus question.</li>
-        </ul>
+       <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
+          <li>Creativity</li>
+          <li>Technical skill</li>
+          <li>Craftsmanship</li>
+          <li>Adherence to the design theme</li>
+          <li>Overall presentation</li>
+          </ul>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-3xl font-semibold mb-4 text-purple-400">Precautions</h2>
+       <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
+          <li>Each participant should be in shoes</li>
+          <li>All participants must adhere to strict safety protocols when operating the lathe machine and handling metal materials</li>
+          <li>Any type of cheating or indisciplinary activity would lead to the disqualification of the team from the event</li>
+         </ul>
       </section>
     </div>
   );
