@@ -24,6 +24,7 @@ import MachinaMystiqueRulebook from "./event/MachinaMystique.jsx";
 import SingingRulebook from "./event/Singing.jsx";
 import DancingRulebook from "./event/Dancing.jsx";
 import StandupRulebook from "./event/Standup.jsx";
+import MiniSharkTankRulebook from "./event/MiniSharkTank.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -107,6 +108,14 @@ const routes = createBrowserRouter([
         element: <TalkathonRulebook/>,
       }
       ,
+      {
+        path: "/machinamystique",
+        element: <MachinaMystiqueRulebook/>,
+      } ,
+      {
+        path: "/minisharktank",
+        element: <MiniSharkTankRulebook/>,
+      } ,
       {
         path: "/machinamystique",
         element: <MachinaMystiqueRulebook/>,
