@@ -6,107 +6,82 @@ const MachinaMystiqueRulebook = () => {
       <h1 className="text-4xl font-extrabold mb-8 text-center text-blue-400 tracking-wide uppercase text-white">Machina Mystique Rulebook</h1>
 
       <section className="mb-8">
+      <p className="text-gray-300 text-lg leading-relaxed">
+       Welcome to <span className="text-bold text-2xl text-white">Machina Mystique</span>, a thrilling Quiz event designed to challenge your knowledge and ignite your curiosity !  
+        </p>
         <h2 className="text-3xl font-semibold mb-4 text-purple-400">Event Overview</h2>
         <p className="text-gray-300 text-lg leading-relaxed">
-        This competition brings together students passionate about machining, design, and craftsmanship. Participants receive a metal workpiece and design, and must shape it using a lathe machine. It's a hands-on challenge in precision manufacturing.
+        Machina Mystique consists of a total of 60 questions spread over two rounds, each containing a series of questions  designed to test participants' knowledge across their mechanical reasoning and Aptitute 
         </p>
       </section>
 
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-purple-400">Eligibility</h2>
-        <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>Participants can be from any branch and year (1st year to 3rd year).</li>
-        </ul>
-      </section>
-
-      <section className="mb-8">
-        <h2 className="text-3xl font-semibold mb-4 text-purple-400">Team Composition</h2>
-        <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>Teams must consist of 2 to 3 members.</li>
-        </ul>
+        <p className="text-gray-300 text-lg leading-relaxed mb-4">
+          Any undergraduate student from 1st to 4th year can participate
+        </p>
       </section>
 
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-purple-400">Event Flow</h2>
 
-        <h3 className="text-2xl font-bold mb-3 text-blue-300">1. Problem Statement Distribution</h3>
-        <p className="text-gray-300 text-lg mb-4">Details for participants based on their year:</p>
-        <ul className="list-disc list-inside text-gray-300 text-lg pl-4 mb-4">
-          <li>
-            <span className="font-semibold">2nd and 3rd Year Participants:</span> Will receive a dataset and a problem
-            statement at the start of the event (online mode).
-          </li>
-          <li>
-            <span className="font-semibold">1st Year Participants:</span> Will receive data visualizations and problem
-            statements in offline mode.
-          </li>
-        </ul>
-        <p className="text-gray-300 text-lg leading-relaxed mb-4">
-          Clarifications regarding the dataset, data visualizations, or problem statements can be addressed to the
-          judges during the event.
+        <h3 className="text-2xl font-bold mb-3 text-blue-300">Round 1</h3>
+        <p className="text-gray-300 text-lg mb-4">In Round 1, participants will face 35 questions covering a wide range of topics, including basics concepts of physics, gears, pictorial theories, react questionnaire and more. Each question will be presented with multiple-choice options. Participants must select the correct answer within the given time limit. Points will be awarded based on the accuracy and speed of the responses which will contribute to the final score . </p>
+        <p className="font-bold text-gray-300 text-lg leading-relaxed mb-4">
+          * Candidates clearing the cut-off for round 1 only allowed to participate for Round 2 *
         </p>
 
-        <h3 className="text-2xl font-bold mb-3 text-blue-300">2. Analysis and Submission</h3>
-        <ul className="list-disc list-inside text-gray-300 text-lg pl-4 mb-4">
-          <li>
-            <span className="font-semibold">2nd and 3rd Year Participants:</span> Analyze the dataset and propose
-            solutions to the problem statement. Solutions must be submitted in the format specified by the organizers
-            (e.g., .xlsx or .ppt).
-          </li>
-          <li>
-            <span className="font-semibold">1st Year Participants:</span> Solve questions in offline mode based on the
-            provided data visualizations and interpretations.
-          </li>
-        </ul>
-        <p className="text-gray-300 text-lg leading-relaxed mb-4">
-          Note: A bonus question will be circulated after the submission of the main problem statement round.
+        <h3 className="text-2xl font-bold mb-3 text-blue-300">Round 2</h3>
+        <p className="text-gray-300 text-lg mb-4">Round 2 features 25 challenging questions, delving deeper into complex concepts and trivia. Similar to Round 1, participants will have multiple-choice options and must answer within the allotted time. Points in this round will contribute to the final score, determining the winners of the event.
         </p>
+        </section>
 
-        <h3 className="text-2xl font-bold mb-3 text-blue-300">3. Presentation</h3>
-        <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>
-            <span className="font-semibold">2nd and 3rd Year Participants:</span> Each selected team will present their
-            solutions to the judges. Presentations should cover analysis, methodology, and results.
-          </li>
-          <li>
-            <span className="font-semibold">1st Year Participants:</span> No presentations are required.
-          </li>
-        </ul>
+        <section>
+        <h3 className="text-2xl font-bold mb-3 text-purple-400">Scoring</h3>
+        <p className="text-gray-300 text-lg mb-4"> Each correct answer in Round 1 will earn participants<span className='font-bold'> 2 point</span>. In Round 2, correct answers will be awarded <span className='font-bold'>3 points</span> each. Incorrect answers will incur penalties as<span className='font-bold'> -1</span>,<span className='font-bold'> Zero </span> points will be to unattempted question.
+       </p>
       </section>
 
       <section className="mb-8">
-        <h2 className="text-3xl font-semibold mb-4 text-purple-400">Duration</h2>
-        <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>
-            <span className="font-semibold">2nd and 3rd Year Participants:</span>
-            <ul className="list-disc ml-6">
-              <li>Analysis and Submission: 3 hours</li>
-              <li>Bonus Question: 30 minutes</li>
-              <li>Presentations: 10 minutes per team (for eligible teams)</li>
+        <h2 className="text-3xl font-semibold mb-4 text-purple-400">Time Limits</h2>
+        <p className="text-gray-300 text-lg mb-4"> Participants will have a specified time limit to answer each question. Failure to answer within the time limit will result in the question being marked as incorrect.
+        </p>
+        <p className="text-gray-300 text-lg mb-4"> Time specification for the events is as follow:</p>
+        <ul className="list-disc list-inside text-gray-300 text-lg pl-4 flex flex-col gap-5">
+          <li className='font-bold'>Round 1:
+            <ul>
+              <li>Ques 1-15: 10sec/ques</li>
+              <li>Ques 16-25: 15 sec/ques</li>
+              <li>Ques 25-35: 20sec/ques</li>
             </ul>
           </li>
-          <li>
-            <span className="font-semibold">1st Year Participants:</span> Offline event: 1 hour (solving data visual and
-            interpretation questions)
+          <li><span className='font-bold'>Round 2:</span>
+          <ul>
+            <li>All the<span className='font-bold'> 25</span> questions in round 2 have been allotted<span className='font-bold'> 30 sec/ques</span></li>
+          </ul>
           </li>
-        </ul>
+          </ul>
       </section>
 
       <section className="mb-8">
-        <h2 className="text-3xl font-semibold mb-4 text-purple-400">Judging Criteria</h2>
+        <h2 className="text-3xl font-semibold mb-4 text-purple-400">Tiebreakers</h2>
         <p className="text-gray-300 text-lg leading-relaxed mb-4">
-          Judges will evaluate teams based on the following:
-        </p>
-        <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
-          <li>Innovativeness and Creativity: Novelty and originality in the approach.</li>
-          <li>Analytical Skills: Depth of analysis and effective use of data.</li>
-          <li>
-            Presentation Quality: Clarity, structure, and articulation of ideas (applicable to 2nd and 3rd years).
-          </li>
-          <li>Accuracy: How effectively the solution addresses the problem statement.</li>
-          <li>Feasibility: Practicality and implementation potential of the solution.</li>
-          <li>Bonus Question Solution Approach: Creativity and accuracy in addressing the bonus question.</li>
-        </ul>
+        In case of a tie, tiebreaker questions may be introduced to determine the final standings.
+       </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-3xl font-semibold mb-4 text-purple-400">Fair Play</h2>
+        <p className="text-gray-300 text-lg leading-relaxed mb-4">
+        Participants are expected to maintain honesty and integrity throughout the event. Any form of cheating or misconduct will result in immediate disqualification
+       </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-3xl font-semibold mb-4 text-purple-400">Conclusion</h2>
+        <p className="text-gray-300 text-lg leading-relaxed mb-4">
+        Machina Mystique offers a platform for participants to showcase their knowledge and quick thinking in a fun and competitive environment. May the best minds prevail, and may the quest for knowledge continue!
+       </p>
       </section>
     </div>
   );
