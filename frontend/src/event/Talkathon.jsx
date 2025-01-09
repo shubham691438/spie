@@ -79,11 +79,11 @@ const TalkathonRulebook = () => {
         <ul className="list-disc list-inside text-gray-300 text-lg pl-4">
           <li>
             <span className="font-semibold">2nd and 3rd Year Participants:</span>
-            <ul className="list-disc ml-6">
+            
               <li>Analysis and Submission: 3 hours</li>
               <li>Bonus Question: 30 minutes</li>
               <li>Presentations: 10 minutes per team (for eligible teams)</li>
-            </ul>
+            
           </li>
           <li>
             <span className="font-semibold">1st Year Participants:</span> Offline event: 1 hour (solving data visual and
