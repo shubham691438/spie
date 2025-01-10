@@ -25,7 +25,7 @@ const data = [
   },
   {
     name: "Talkathon",
-    des: "This event provides an opportunity for the designers to showcase the optimal design solutions for the industrial parts in question using CATIA V5 software only. This software is used in design in various fields such as automobiles, manufacturing etc. making it a necessary skill to possess in industrial sectors.",
+    des: "",
     image:"../talkathon.jpg",
     route: "/talkathon",
   },
