@@ -42,20 +42,26 @@ const data = [
     route: "/minisharktank",
   },
   {
+    name: "Fun Events",
+    des: "Welcome to the ultimate showdown of fun and skills! Get ready to unleash your competitive spirit in a series of wacky and wild challenges. From racing with linked elbows in the Octopus Race to flipping bottles with precision, each round is packed with twists, turns, and triumphs. Make it to the top—let the games begin!",
+    image:"../IMG-21.jpg",
+    route: "/funevents",
+  },
+  {
     name: "Singing",
-    des: "The objective of Machina Mystique is to assess participants’ mechanical reasoning skills through a series of quiz questions designed to challenge their understanding of mechanical principles, problem-solving abilities, and logical reasoning.",
+    des: "Step into the spotlight and let your voice shine in the Singing Showdown! Whether you’re hitting high notes or delivering an emotional ballad, this is your chance to showcase your vocal talent. With passion, power, and stage presence, the competition heats up as singers battle for the crown of ultimate vocalist. Get ready to belt, harmonize, and captivate!",
     image:"../IMG-10.jpg",
     route: "/singing",
   },
   {
     name: "Dancing",
-    des: "The objective of Machina Mystique is to assess participants’ mechanical reasoning skills through a series of quiz questions designed to challenge their understanding of mechanical principles, problem-solving abilities, and logical reasoning.",
+    des: "Get your groove on in the Dancing Extravaganza! From hip-hop to contemporary, this is the stage where rhythm meets creativity. Show off your best moves, whether you’re popping, locking, or twirling, in a high-energy competition that’s all about style, flair, and perfect timing. Who will leave the crowd in awe with their unstoppable moves?",
     image:"../dance.jpg",
     route: "/dancing",
   },
   {
     name: "Stand-ups",
-    des: "The objective of Machina Mystique is to assess participants’ mechanical reasoning skills through a series of quiz questions designed to challenge their understanding of mechanical principles, problem-solving abilities, and logical reasoning.",
+    des: "Get ready for laughs galore in the Stand-Up Comedy Slam! Comedians will bring their sharpest wit and funniest stories to the stage, battling for the title of funniest performer. With clever jokes, wild humor, and perfect timing, they’ll have the audience in stitches. The only rule? Make them laugh until they can’t breathe! Let's rock with your performance",
     image:"../standup.jpg",
     route: "/standup",
   }
