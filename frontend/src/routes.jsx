@@ -25,6 +25,7 @@ import SingingRulebook from "./event/Singing.jsx";
 import DancingRulebook from "./event/Dancing.jsx";
 import StandupRulebook from "./event/Standup.jsx";
 import MiniSharkTankRulebook from "./event/MiniSharkTank.jsx";
+import FunEventsRulebook from "./event/FunEvents.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -119,6 +120,10 @@ const routes = createBrowserRouter([
       {
         path: "/machinamystique",
         element: <MachinaMystiqueRulebook/>,
+      } ,
+      {
+        path: "/funevents",
+        element: <FunEventsRulebook/>,
       } ,
       {
         path: "/singing",
