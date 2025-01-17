@@ -1,28 +1,17 @@
-import React, { useState,useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import FormfacadeEmbed from "@formfacade/embed-react";
-import  QRcode  from '../assets/img/QR.jpg'
+import React, { useState, useEffect } from "react";
 
 const Register = () => {
-  
-  
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     // Simulate page load completion
     const handlePageLoad = () => setIsLoading(false);
 
-    // Use window.onload to detect when the page is fully loaded
-    // if (document.readyState === "complete" ) {
-    //   handlePageLoad();
-    // } else {
-    //   window.addEventListener("load", handlePageLoad);
-    // }
-
+    // Simulated delay for loader
     setTimeout(() => {
       handlePageLoad();
     }, 2000);
 
-    // Cleanup event listener
     return () => window.removeEventListener("load", handlePageLoad);
   }, []);
 
@@ -31,27 +20,29 @@ const Register = () => {
       {isLoading ? (
         // Loader component
         <div className="fixed inset-0 flex justify-center items-center bg-black text-white">
-          {/* <div className="loader">Loading...</div> */}
-          <div class="loader"></div>
+          <div className="loader"></div>
         </div>
       ) : (
         // Your main application
-        <div  >
-          
-          <FormfacadeEmbed
-
-          formFacadeURL="https://formfacade.com/include/115497636215318266391/form/1FAIpQLScbEY-q6R71VkyCMUmR-dMTUVdf_fxYD1637Gv94pIqcucZWQ/classic.js/?div=ff-compose"
-          
-          onSubmitForm={() => console.log('Form submitted')}
-          
-          />
-
-          
-        
+        <div className="w-full h-screen flex justify-center items-center bg-gray-100">
+          <div className="shadow-lg rounded-md overflow-hidden w-full max-w-4xl">
+            {/* Google Form Embed */}
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScbEY-q6R71VkyCMUmR-dMTUVdf_fxYD1637Gv94pIqcucZWQ/viewform?embedded=true"
+              width="640"
+              height="2283"
+              frameBorder="0"
+              marginHeight="0"
+              marginWidth="0"
+              title="Google Form"
+              className="w-full"
+            >
+              Loading…
+            </iframe>
+          </div>
         </div>
       )}
     </>
-    
   );
 };
 
