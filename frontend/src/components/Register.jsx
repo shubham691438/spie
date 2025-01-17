@@ -23,7 +23,7 @@ const Register = () => {
           <div className="loader"></div>
         </div>
       ) : (
-        <div className="flex flex-col h-screen">
+        <div className="flex flex-col">
           {/* Header */}
           <header className="w-full bg-blue-600 text-white p-4 shadow-md">
             <h1 className="text-center text-xl">My Application Header</h1>
