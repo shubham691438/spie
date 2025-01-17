@@ -48,7 +48,7 @@ const Register = () => {
         <div className="flex flex-col bg-gray-900 text-white">
           {/* Header */}
           <header className="bg-gray-800 text-white p-4 shadow-md">
-            <h1 className="text-center text-xl">My Application Header</h1>
+            <h1 className="text-center text-xl">PRODYOG REGISTRATION FORM</h1>
           </header>
 
           {/* Main Content (Iframe container) */}
@@ -73,7 +73,7 @@ const Register = () => {
 
           {/* Footer */}
           <footer className="bg-gray-800 text-white p-4 shadow-md">
-            <p className="text-center text-sm">© 2025 My Application</p>
+            <p className="text-center text-sm">© 2025 SPIE</p>
           </footer>
         </div>
       )}
