@@ -23,15 +23,15 @@ const Register = () => {
           <div className="loader"></div>
         </div>
       ) : (
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-gray-900 text-white">
           {/* Header */}
-          <header className="w-full bg-blue-600 text-white p-4 shadow-md">
+          <header className="w-full bg-gray-800 text-white p-4 shadow-md">
             <h1 className="text-center text-xl">My Application Header</h1>
           </header>
 
           {/* Main Content (Iframe container) */}
-          <main className="flex-1 bg-gray-100 p-4">
-            <div className="shadow-lg rounded-md overflow-hidden max-w-4xl mx-auto">
+          <main className="flex-1 bg-gray-900 p-4">
+            <div className="shadow-lg rounded-md overflow-hidden max-w-4xl mx-auto bg-gray-800">
               <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLScbEY-q6R71VkyCMUmR-dMTUVdf_fxYD1637Gv94pIqcucZWQ/viewform?embedded=true"
                 width="100%"
