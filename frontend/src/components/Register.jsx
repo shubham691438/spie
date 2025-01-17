@@ -30,7 +30,7 @@ const Register = () => {
           </header>
 
           {/* Main Content (Iframe container) */}
-          <main className="flex-1 overflow-auto bg-gray-100 p-4">
+          <main className="flex-1 bg-gray-100 p-4">
             <div className="shadow-lg rounded-md overflow-hidden max-w-4xl mx-auto">
               <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLScbEY-q6R71VkyCMUmR-dMTUVdf_fxYD1637Gv94pIqcucZWQ/viewform?embedded=true"
