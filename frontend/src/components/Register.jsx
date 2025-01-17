@@ -40,10 +40,10 @@ const Register = () => {
           
           <FormfacadeEmbed
 
-          formFacadeURL="https://formfacade.com/include/107273075676913643495/form/1FAIpQLScbEY-q6R71VkyCMUmR-dMTUVdf_fxYD1637Gv94pIqcucZWQ/classic.js/?div=ff-compose"
-
-          onSubmitForm={() =>alert('Form submitted')}
-
+          formFacadeURL="https://formfacade.com/include/115497636215318266391/form/1FAIpQLScbEY-q6R71VkyCMUmR-dMTUVdf_fxYD1637Gv94pIqcucZWQ/classic.js/?div=ff-compose"
+          
+          onSubmitForm={() => console.log('Form submitted')}
+          
           />
 
           
