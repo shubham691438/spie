@@ -29,13 +29,13 @@ const Contact = () => {
         {/* Social Links */}
         <div className="mt-12 space-y-4">
           <a
-            href="https://spie.vercel.app/"
+            href="https://spie.nitjsr.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between bg-gradient-to-r from-teal-500 to-teal-700 rounded-lg p-4 shadow-md hover:scale-105 transition-transform"
           >
             <FaGlobe className="text-3xl" />
-            <p className="text-md">/spie.vercel.app/</p>
+            <p className="text-md">https://spie.nitjsr.com/</p>
           </a>
 
           <a
