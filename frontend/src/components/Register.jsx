@@ -1,42 +1,42 @@
-import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
-import { WebView } from "react-native-webview";
+import React, { useState } from "react";
 
 const Register = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-  const handleWebViewLoad = () => {
+  // Function to hide loader when the form loads
+  const handleLoad = () => {
     setIsLoading(false);
   };
 
   return (
-    <View style={styles.container}>
+    <div style={styles.container}>
       {/* Loader */}
       {isLoading && (
-        <View style={styles.loaderContainer}>
-          <ActivityIndicator size="large" color="#ffffff" />
-          <Text style={styles.loaderText}>Loading...</Text>
-        </View>
+        <div style={styles.loaderContainer}>
+          <p style={styles.loaderText}>Loading...</p>
+        </div>
       )}
 
-      {/* WebView */}
-      <WebView
-        source={{
-          uri: "https://docs.google.com/forms/d/e/1FAIpQLScbEY-q6R71VkyCMUmR-dMTUVdf_fxYD1637Gv94pIqcucZWQ/viewform?embedded=true",
-        }}
-        onLoad={handleWebViewLoad}
-        style={styles.webview}
-        javaScriptEnabled={true}
-        domStorageEnabled={true}
+      {/* Embedded Google Form using iframe */}
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScbEY-q6R71VkyCMUmR-dMTUVdf_fxYD1637Gv94pIqcucZWQ/viewform?embedded=true"
+        style={styles.iframe}
+        onLoad={handleLoad}
+        title="Registration Form"
       />
-    </View>
+    </div>
   );
 };
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
-    flex: 1,
-    backgroundColor: "#1A202C", // Dark gray
+    position: "relative",
+    width: "100vw",
+    height: "100vh",
+    backgroundColor: "#1A202C", // Dark background
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   loaderContainer: {
     position: "absolute",
@@ -44,19 +44,22 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
+    display: "flex",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "black",
-    zIndex: 1,
+    color: "#ffffff",
+    fontSize: "16px",
   },
   loaderText: {
     color: "#ffffff",
-    marginTop: 10,
-    fontSize: 16,
+    fontSize: "16px",
   },
-  webview: {
-    flex: 1,
+  iframe: {
+    width: "100%",
+    height: "100%",
+    border: "none",
   },
-});
+};
 
 export default Register;
