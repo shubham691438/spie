@@ -62,7 +62,7 @@ const RunningTruck = ({ setIsTruckRunning }) => {
     {!isPlaying && (
       <div className="fixed bottom-[30%] md:bottom-0 sm:top-[450px] left-1/2 z-20 ">
         <div className="transform -translate-x-1/2 bg-black bg-opacity-60 text-white text-base sm:text-lg px-3 sm:px-4 py-2 rounded-md text-center">
-        To visit the website drag the box into truck !
+        To visit the website drag the box into the truck !
         </div>
         {/* <img
           src={PointingDownIcon}
