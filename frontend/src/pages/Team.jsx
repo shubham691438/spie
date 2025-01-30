@@ -49,7 +49,7 @@ const members = [
   { id: 42, name: "Jadav Chandan", batch: "2023", por: "CREATIVE", contact: "", src: "/core-42.png", alt: "42" },
   { id: 43, name: "Mohit", batch: "2023", por: "Web Team", contact: "", src: "/core-43.png", alt: "43" },
   { id: 44, name: "Sovik", batch: "2023", por: "WEB TEAM", contact: "", src: "/core-44.png", alt: "44" },
-  { id: 45, name: "Vishal", batch: "2023", por: "WEB TEAM", contact: "", src: "/core-45.png", alt: "45" },
+  { id: 45, name: "Vishal Tiwari", batch: "2023", por: "WEB TEAM", contact: "", src: "/core-45.png", alt: "45" },
   { id: 46, name: "Tabish", batch: "2023", por: "PR", contact: "", src: "/core-46.png", alt: "46" },
   { id: 47, name: "Saransh", batch: "2023", por: "PR", contact: "", src: "/core-47.png", alt: "47" },
   { id: 48, name: "Sushant", batch: "2023", por: "PR", contact: "", src: "/core-48.png", alt: "48" },
