@@ -127,15 +127,15 @@ const routes = createBrowserRouter([
       } ,
       {
         path: "/singing",
-        element: <SingingRulebook/>,
+        element: <ComingSoon/>,
       } ,
       {
         path: "/dancing",
-        element: <DancingRulebook/>,
+        element: <ComingSoon/>,
       } ,
       {
         path: "/standup",
-        element: <StandupRulebook/>,
+        element: <ComingSoon/>,
       }
       
     ],
