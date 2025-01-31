@@ -15,7 +15,12 @@ import VCImage from '../assets/img/vice-chairman-image.png'
 import TeamImage from '../assets/img/team-image.jpg'
 
 const App = () => {
-  
+ const handleDownload = () => {
+      const fileUrl = '../public/brochure.pdf'; // Adjust the path as per your directory structure
+      const link = document.createElement('a');
+      link.href = fileUrl;
+      link.download = 'PROGYOG25 BROCHURE.pdf';  // You can set a custom name for the downloaded file
+      link.click(); }
 
   return (
     <div>
@@ -138,7 +143,19 @@ const App = () => {
 
       {/* Major Events Section */}
       <div className="mt-10">
-        <h2 className="text-6xl font-extrabold text-white">Major Events</h2>
+      <h2 className="text-6xl font-extrabold text-white"> PRODYOG 2025</h2>
+      <p className="font-semibold text-white">Annual Technical Fest</p>
+      <p className="font-semibold text-white">31 Jan - 2 Feb 2025</p>
+      {/* <a href="public/PROGYOG'25%20BROCHURE.pdf" download> */}
+    <button onClick={handleDownload} class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+      Download Brochure
+    </button>
+    <div className="flex justify-center ">
+    {/* <img src="../public/prodyog.jpg" alt="Prodyog inaugural" className="rounded-lg shadow-lg" style={{ width: '1200px', height: '600px' }} ></img> */}
+    <img src="../public/prodyog.jpg" alt="Prodyog inaugural" className="w-full sm:w-3/4 md:w-1/2 lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-150 rounded-lg shadow-lg" ></img>
+  {/* </a> */}
+  </div>
+        <h4 className="text-4xl font-extrabold text-white mt-4">Major Events</h4>
         <HomeEvents />
         <div className="md:ml-48 flex justify-center md:justify-start text-center">
               <HoverBorderGradient
