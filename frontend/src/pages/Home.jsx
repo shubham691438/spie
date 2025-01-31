@@ -13,13 +13,15 @@ import { Link } from "react-router-dom";
 import HodImage from '../assets/img/hod-image.png'
 import VCImage from '../assets/img/vice-chairman-image.png'
 import TeamImage from '../assets/img/team-image.jpg'
+import ProdyogImage from '../assets/img/prodyog.jpg'
+import Brochure from '../assets/files/brochure.pdf'
 
 const App = () => {
  const handleDownload = () => {
-      const fileUrl = '../public/brochure.pdf'; // Adjust the path as per your directory structure
+      // const fileUrl = '../public/brochure.pdf'; 
       const link = document.createElement('a');
-      link.href = fileUrl;
-      link.download = 'PROGYOG25 BROCHURE.pdf';  // You can set a custom name for the downloaded file
+      link.href = Brochure;
+      link.download = 'PROGYOG25 BROCHURE.pdf';  
       link.click(); }
 
   return (
@@ -152,7 +154,7 @@ const App = () => {
     </button>
     <div className="flex justify-center ">
     {/* <img src="../public/prodyog.jpg" alt="Prodyog inaugural" className="rounded-lg shadow-lg" style={{ width: '1200px', height: '600px' }} ></img> */}
-    <img src="../public/prodyog.jpg" alt="Prodyog inaugural" className="w-full sm:w-3/4 md:w-1/2 lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-150 rounded-lg shadow-lg" ></img>
+    <img src={ProdyogImage} alt="Prodyog inaugural" className="w-full sm:w-3/4 md:w-1/2 lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-150 rounded-lg shadow-lg" ></img>
   {/* </a> */}
   </div>
         <h4 className="text-4xl font-extrabold text-white mt-4">Major Events</h4>
